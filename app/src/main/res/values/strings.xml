@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">EnergieSparen</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+
+    <string name="nav_item_01">Home</string>
+    <string name="nav_item_02">ETC</string>
+    <string name="nav_item_03">TABS1</string>
+    <string name="nav_item_04">tabs 2</string>
+
+    <string-array name="navTitles">
+        <item>@string/nav_item_01</item>
+        <item>@string/nav_item_02</item>
+        <item>@string/nav_item_03</item>
+        <item>@string/nav_item_04</item>
+    </string-array>
+
+    <string name="tab_item_01">Bad</string>
+    <string name="tab_item_02">Küche</string>
+    <string name="tab_item_03">Wohnung</string>
+    <string name="tab_item_04">Keller</string>
+
+    <string-array name="tabtitles1">
+        <item>@string/tab_item_01</item>
+        <item>@string/tab_item_02</item>
+        <item>@string/tab_item_03</item>
+    </string-array>
+
+    <string name="StromKueche01">STROMk01</string>
+    <string name="StromKueche02">STROMk02</string>
+
+    <string-array name="STROMKUECHE">
+        <item>@string/StromKueche01</item>
+        <item>@string/StromKueche02</item>
+    </string-array>
+
+    <string name="StromBad01">STROMBAD01</string>
+    <string name="StromBad02">STROMBAD02</string>
+
+    <string-array name="STROMBAD">
+        <item>@string/StromBad01</item>
+        <item>@string/StromBad01</item>
+    </string-array>
+
+    <string name="Stromwohnung01">STROMkD01</string>
+    <string name="Stromwohnung02">STROMWD02</string>
+    <string name="Stromwohnung03">STROMWD03</string>
+    <string name="Stromwohnung04">STROMWD04</string>
+
+    <string-array name="STROMwohnung">
+        <item>@string/Stromwohnung01</item>
+        <item>@string/Stromwohnung02</item>
+       <item>@string/Stromwohnung03</item>
+    <item>@string/Stromwohnung04</item>
+</string-array>
+
+
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">sonstiges Fragment</string>
+</resources>

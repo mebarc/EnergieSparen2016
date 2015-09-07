@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+
+        <item
+            android:id="@+id/nav_item_01_home"
+            android:checked="true"
+            android:title="@string/nav_item_01" />
+        <item
+            android:id="@+id/nav_item_02_etc"
+            android:checked="false"
+            android:title="@string/nav_item_02" />
+
+        <item
+            android:id="@+id/nav_item_03_tab1"
+            android:checked="false"
+            android:title="@string/nav_item_03" />
+        <item
+            android:id="@+id/nav_item_04_tab2"
+            android:checked="false"
+            android:title="@string/nav_item_04" />
+
+
+        <item android:title="Sonstiges">
+            <menu>
+                <item android:title="Sub item 1"
+                    android:checkable="false"/>
+                <item android:title="Sub item 2"
+                    android:checkable="false"/>
+            </menu>
+
+        </item>
+    </group>
+</menu>
