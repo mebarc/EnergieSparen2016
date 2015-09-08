@@ -25,7 +25,8 @@
 
         <item android:title="Sonstiges">
             <menu>
-                <item android:title="Sub item 1"
+                <item android:title="Settings"
+                    android:id="@+id/nav_sub_item_01_settings"
                     android:checkable="false"/>
                 <item android:title="Sub item 2"
                     android:checkable="false"/>

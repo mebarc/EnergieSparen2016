@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private int mCurrentSelectedPosition;
     private boolean mFromSavedInstanceState;
     private String[] titles;
+    private int settingsposition = 4;
 
 
     @Override
@@ -88,11 +89,19 @@ public class MainActivity extends AppCompatActivity {
                                         getResources().getStringArray(R.array.STROMwohnung), getResources().getStringArray(R.array.STROMBAD))).commit();
                                 mCurrentSelectedPosition = 3;
                                 break;
+                            case R.id.nav_sub_item_01_settings:
+                                mCurrentSelectedPosition = settingsposition;
+                                startSettings();
+
                         }
                         return false;
                     }
                 });
 
+    }
+
+    private void startSettings() {
+        startActivity(new Intent(this, SettingsActivity.class));
     }
 
     private ActionBarDrawerToggle setupDrawerToggle() {
@@ -126,8 +135,9 @@ public class MainActivity extends AppCompatActivity {
         if (mActionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         } else if (id == R.id.action_settings) {
+            mCurrentSelectedPosition = settingsposition;
             //Toast.makeText(MainActivity.this, "settings pressed", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(this, SettingsActivity.class));
+            startSettings();
         }
 
         return super.onOptionsItemSelected(item);

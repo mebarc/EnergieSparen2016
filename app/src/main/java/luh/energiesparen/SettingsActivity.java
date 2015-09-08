@@ -10,7 +10,6 @@ public class SettingsActivity  extends AppCompatActivity {
     private Toolbar mToolbar;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
