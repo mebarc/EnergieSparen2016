@@ -15,4 +15,5 @@
     <color name="icons">#FFFFFF</color>
     <color name="divider">#B6B6B6</color>
 
+    <color name="preference_fallback_accent_color">@color/accent</color>
 </resources>

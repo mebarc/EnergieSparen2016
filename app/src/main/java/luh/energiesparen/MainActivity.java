@@ -1,6 +1,8 @@
 package luh.energiesparen;
 
+import android.content.Intent;
 import android.content.res.Configuration;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -124,7 +126,8 @@ public class MainActivity extends AppCompatActivity {
         if (mActionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         } else if (id == R.id.action_settings) {
-            Toast.makeText(MainActivity.this, "settings pressed", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(MainActivity.this, "settings pressed", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, SettingsActivity.class));
         }
 
         return super.onOptionsItemSelected(item);
@@ -149,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION, 0);
         Menu menu = mNavigationView.getMenu();

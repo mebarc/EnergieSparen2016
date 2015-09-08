@@ -1,0 +1,36 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <PreferenceCategory android:title="Section 1">
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="example_checkbox"
+            android:summary="Recommendations for people to contact based on your message history"
+            android:title="Enable social recommendations" />
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="John Smith"
+            android:inputType="textCapWords"
+            android:key="example_text"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Display Name" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Einstellungen 2">
+
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/pref_example_list_titles"
+            android:entryValues="@array/pref_example_list_values"
+            android:key="example_list"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="Add friends to message" />
+    </PreferenceCategory>
+</PreferenceScreen>
