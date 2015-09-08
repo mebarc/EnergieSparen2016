@@ -46,6 +46,15 @@ public class MainActivity extends AppCompatActivity {
 
         titles = getResources().getStringArray(R.array.navTitles);
 
+        if (savedInstanceState != null) {
+            mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);
+            mFromSavedInstanceState = true;
+            setTitle(titles[mCurrentSelectedPosition]);
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
+            setTitle(titles[0]);
+        }
+
         mNavigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -68,26 +77,20 @@ public class MainActivity extends AppCompatActivity {
                                 mCurrentSelectedPosition = 1;
                                 break;
                             case R.id.nav_item_03_tab1:
-                                //getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.tabtitles1))).commit();
                                 getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.tabtitles1),
                                         getResources().getStringArray(R.array.STROMBAD), getResources().getStringArray(R.array.STROMKUECHE), getResources().getStringArray(R.array.STROMwohnung))).commit();
+                                mCurrentSelectedPosition = 2;
                                 break;
                             case R.id.nav_item_04_tab2:
-                                 getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new TabsFragment()).commit();
+                                getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.tabtitles1),getResources().getStringArray(R.array.STROMKUECHE),
+                                        getResources().getStringArray(R.array.STROMwohnung), getResources().getStringArray(R.array.STROMBAD))).commit();
+                                mCurrentSelectedPosition = 3;
                                 break;
                         }
                         return false;
                     }
                 });
-        if (savedInstanceState != null) {
-            mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);
-            mFromSavedInstanceState = true;
-            setTitle(titles[mCurrentSelectedPosition]);
-        } else {
-            getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
-            setTitle(titles[0]);
 
-        }
     }
 
     private ActionBarDrawerToggle setupDrawerToggle() {
