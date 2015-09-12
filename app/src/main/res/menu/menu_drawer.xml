@@ -14,13 +14,21 @@
             android:title="@string/nav_item_02" />
 
         <item
-            android:id="@+id/nav_item_03_tab1"
+            android:id="@+id/nav_item_03_heizen"
             android:checked="false"
             android:title="@string/nav_item_03" />
         <item
-            android:id="@+id/nav_item_04_tab2"
+            android:id="@+id/nav_item_04_lueften"
             android:checked="false"
             android:title="@string/nav_item_04" />
+        <item
+            android:id="@+id/nav_item_05_strom"
+            android:checked="false"
+            android:title="@string/nav_item_05" />
+        <item
+            android:id="@+id/nav_item_06_wasser"
+            android:checked="false"
+            android:title="@string/nav_item_06" />
 
 
         <item android:title="Sonstiges">

@@ -10,8 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import java.util.ArrayList;
-
 
 /**
  * A simple {@link Fragment} subclass.
@@ -70,7 +68,7 @@ public class TabsFragment extends Fragment {
 
 
 
-        tabstitles = getActivity().getResources().getStringArray(R.array.tabtitles1);
+        tabstitles = getActivity().getResources().getStringArray(R.array.sTabtitles);
         int_items = tabstitles.length;
 
         viewPager.setAdapter(new MyAdapter(getChildFragmentManager()));

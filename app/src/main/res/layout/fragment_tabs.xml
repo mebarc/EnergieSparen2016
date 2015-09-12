@@ -11,9 +11,9 @@
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimaryDark"
         app:tabGravity="fill"
-        app:tabIndicatorColor="@color/orange"
+        app:tabIndicatorColor="@color/accent"
         app:tabMode="fixed"
-        app:tabSelectedTextColor="@color/orange"
+        app:tabSelectedTextColor="@color/accent"
         app:tabTextColor="@color/white">
     </android.support.design.widget.TabLayout>
 

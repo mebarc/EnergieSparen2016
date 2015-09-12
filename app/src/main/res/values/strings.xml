@@ -8,29 +8,34 @@
 
     <string name="nav_item_01">Home</string>
     <string name="nav_item_02">ETC</string>
-    <string name="nav_item_03">TABS1</string>
-    <string name="nav_item_04">tabs 2</string>
+    <string name="nav_item_03">Heizen</string>
+    <string name="nav_item_04">Lüften</string>
+    <string name="nav_item_05">Stromverbrauch</string>
+    <string name="nav_item_06">Wasserverbrauch</string>
 
     <string-array name="navTitles">
         <item>@string/nav_item_01</item>
         <item>@string/nav_item_02</item>
         <item>@string/nav_item_03</item>
         <item>@string/nav_item_04</item>
+        <item>@string/nav_item_05</item>
+        <item>@string/nav_item_06</item>
     </string-array>
 
     <string name="tab_item_01">Bad</string>
     <string name="tab_item_02">Küche</string>
     <string name="tab_item_03">Wohnung</string>
-    <string name="tab_item_04">Keller</string>
+    <!--<string name="tab_item_04">Keller</string>-->
 
-    <string-array name="tabtitles1">
+    <string-array name="sTabtitles">
         <item>@string/tab_item_01</item>
         <item>@string/tab_item_02</item>
         <item>@string/tab_item_03</item>
     </string-array>
 
     <string name="StromKueche01">STROMk01</string>
-    <string name="StromKueche02">STROMk02</string>
+    <string name="StromKueche02">Dies ist ein sehr sehr langer Tip.\nAm besten kann
+    man damit direkt mal testen, wie so eine Wall of Text dann am Ende aussieht.</string>
 
     <string-array name="STROMKUECHE">
         <item>@string/StromKueche01</item>
