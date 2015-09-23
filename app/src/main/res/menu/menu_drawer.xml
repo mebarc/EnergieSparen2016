@@ -7,7 +7,8 @@
         <item
             android:id="@+id/nav_item_01_home"
             android:checked="true"
-            android:title="@string/nav_item_01" />
+            android:title="@string/nav_item_01"
+            android:icon="@drawable/ic_home"/>
         <item
             android:id="@+id/nav_item_02_etc"
             android:checked="false"
@@ -16,26 +17,32 @@
         <item
             android:id="@+id/nav_item_03_heizen"
             android:checked="false"
-            android:title="@string/nav_item_03" />
+            android:title="@string/nav_item_03"
+            android:icon="@drawable/ic_heizen"/>
         <item
             android:id="@+id/nav_item_04_lueften"
             android:checked="false"
-            android:title="@string/nav_item_04" />
+            android:title="@string/nav_item_04"
+            android:icon="@drawable/ic_wind"/>
         <item
             android:id="@+id/nav_item_05_strom"
             android:checked="false"
-            android:title="@string/nav_item_05" />
+            android:title="@string/nav_item_05"
+            android:icon="@drawable/ic_strom"/>
         <item
             android:id="@+id/nav_item_06_wasser"
             android:checked="false"
-            android:title="@string/nav_item_06" />
+            android:title="@string/nav_item_06"
+            android:icon="@drawable/ic_water"/>
 
 
         <item android:title="Sonstiges">
             <menu>
                 <item android:title="Settings"
                     android:id="@+id/nav_sub_item_01_settings"
-                    android:checkable="false"/>
+                    android:checkable="false"
+                    android:icon="@drawable/ic_settings"/>
+
                 <item android:title="Sub item 2"
                     android:checkable="false"/>
             </menu>
