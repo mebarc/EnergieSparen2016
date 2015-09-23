@@ -5,3 +5,10 @@
 .DS_Store
 /build
 /captures
+/app/src/main/res/drawable-hdpi
+/app/src/main/res/drawable-xxhdpi
+/app/src/main/res/drawable-mdpi
+/app/src/main/res/drawable-xhdpi
+
+
+
