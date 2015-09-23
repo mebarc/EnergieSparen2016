@@ -113,6 +113,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, SettingsActivity.class));
     }
 
+    private void startImpressum() {
+        startActivity(new Intent(this, ImpressumActivity.class));
+    }
+
+    private void startRechtliches() {
+        startActivity(new Intent(this, RechtlichesActivity.class));
+    }
+
     private ActionBarDrawerToggle setupDrawerToggle() {
         return new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.drawer_open, R.string.drawer_close);
     }
@@ -147,6 +155,10 @@ public class MainActivity extends AppCompatActivity {
             mCurrentSelectedPosition = settingsposition;
             //Toast.makeText(MainActivity.this, "settings pressed", Toast.LENGTH_SHORT).show();
             startSettings();
+        } else if (id == R.id.action_impressum) {
+            startImpressum();
+        } else if (id == R.id.action_rechtliches) {
+            startRechtliches();
         }
 
         return super.onOptionsItemSelected(item);

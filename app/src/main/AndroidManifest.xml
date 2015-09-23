@@ -23,6 +23,16 @@
             android:parentActivityName=".MainActivity"
             android:configChanges="orientation|screenSize|keyboardHidden">
         </activity>
+        <activity android:name=".ImpressumActivity"
+            android:label="Impressum"
+            android:parentActivityName=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+        </activity>
+        <activity android:name=".RechtlichesActivity"
+            android:label="Rechtliches"
+            android:parentActivityName=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden">
+        </activity>
     </application>
 
 </manifest>

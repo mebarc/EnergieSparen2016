@@ -2,6 +2,8 @@
     <string name="app_name">EnergieSparen</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="action_rechtliches">Rechtliches</string>
+    <string name="action_impressum">Impressum</string>
     <string name="action_settings">Settings</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
@@ -66,4 +68,6 @@
 
 
     <string name="hello_blank_fragment">sonstiges Fragment</string>
+    <string name="rechtliches">Rechtliches</string>
+    <string name="impressum">Impressum</string>
 </resources>
