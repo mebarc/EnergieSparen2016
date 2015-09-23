@@ -15,4 +15,12 @@
         android:text="@string/rechtliches"
         android:id="@+id/textView2"
         android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Icons made by Freepik from http://www.flaticon.com\n are licensed under Creative Commons BY 3.0"
+        android:id="@+id/textView4"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
