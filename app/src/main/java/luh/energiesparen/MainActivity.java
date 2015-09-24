@@ -74,10 +74,10 @@ public class MainActivity extends AppCompatActivity {
                                 getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
                                 mCurrentSelectedPosition = 0;
                                 break;
-                            case R.id.nav_item_02_etc:
+                            /*case R.id.nav_item_02_etc:
                                 getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new BlankFragment()).commit();
                                 mCurrentSelectedPosition = 1;
-                                break;
+                                break;*/
                             case R.id.nav_item_03_heizen:
                                 getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.sTabtitles),
                                         getResources().getStringArray(R.array.STROMBAD), getResources().getStringArray(R.array.STROMKUECHE), getResources().getStringArray(R.array.STROMwohnung))).commit();

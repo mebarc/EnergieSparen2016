@@ -9,10 +9,10 @@
             android:checked="true"
             android:title="@string/nav_item_01"
             android:icon="@drawable/ic_home"/>
-        <item
+        <!--<item
             android:id="@+id/nav_item_02_etc"
             android:checked="false"
-            android:title="@string/nav_item_02" />
+            android:title="@string/nav_item_02" />-->
 
         <item
             android:id="@+id/nav_item_03_heizen"
