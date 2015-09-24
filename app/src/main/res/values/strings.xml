@@ -66,7 +66,9 @@
 
 
 
-
+    <string name="strom_preis">Strompreis</string>
+    <string name="gas_preis">Gaspreis</string>
+    <string name="wasser_preis">Wasserpreis</string>
     <string name="hello_blank_fragment">sonstiges Fragment</string>
     <string name="rechtliches">Rechtliches</string>
     <string name="impressum">Impressum</string>

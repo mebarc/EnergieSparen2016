@@ -2,7 +2,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <PreferenceCategory android:title="Section 1">
+    <PreferenceCategory android:title="Verbrauchspreise">
+
+        <EditTextPreference
+            android:defaultValue="@string/strom_defaultValue"
+            android:inputType="number"
+            android:key="preis_strom"
+            android:title="@string/strom_preis"
+            android:dialogTitle="@string/strom_preis"
+            android:dialogMessage="  Eingabe in Cent je kWh"
+            android:hint="@string/strom_defaultValue"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"/>
+
+        <EditTextPreference
+            android:defaultValue="100"
+            android:inputType="number"
+            android:key="preis_gas"
+            android:title="@string/gas_preis"
+            android:dialogTitle="@string/gas_preis"
+            android:dialogMessage="  Eingabe in Cent je Kubikmeter (m^3)"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"/>
+
+        <EditTextPreference
+            android:defaultValue="100"
+            android:inputType="number"
+            android:key="preis_wasser"
+            android:title="@string/wasser_preis"
+            android:dialogTitle="@string/wasser_preis"
+            android:dialogMessage="  Eingabe in Cent je Kubikmeter (m^3)"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"/>
+
+
+    </PreferenceCategory>
+
+    <Preference
+        android:title="Werkseinstellungen"
+        android:key="resetbutton"
+        >
+    </Preference>
+
+    <PreferenceCategory android:title="sonstiges / test ">
+
+        <ListPreference
+            android:defaultValue="-1"
+            android:entries="@array/pref_example_list_titles"
+            android:entryValues="@array/pref_example_list_values"
+            android:key="example_list"
+            android:negativeButtonText="@null"
+            android:positiveButtonText="@null"
+            android:title="Add friends to message" />
 
         <CheckBoxPreference
             android:defaultValue="true"
@@ -19,18 +73,7 @@
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:title="Display Name" />
-
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="Einstellungen 2">
 
-        <ListPreference
-            android:defaultValue="-1"
-            android:entries="@array/pref_example_list_titles"
-            android:entryValues="@array/pref_example_list_values"
-            android:key="example_list"
-            android:negativeButtonText="@null"
-            android:positiveButtonText="@null"
-            android:title="Add friends to message" />
-    </PreferenceCategory>
 </PreferenceScreen>
