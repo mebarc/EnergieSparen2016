@@ -129,6 +129,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, RechtlichesActivity.class));
     }
 
+
     private ActionBarDrawerToggle setupDrawerToggle() {
         return new ActionBarDrawerToggle(this, mDrawerLayout, mToolbar, R.string.drawer_open, R.string.drawer_close);
     }
