@@ -15,11 +15,11 @@
         <!-- Customize your theme here. -->
     </style>
 
-    <style name="Preference_TextAppearanceMaterialBody2">
+    <!--<style name="Preference_TextAppearanceMaterialBody2">
         <item name="android:textSize">14sp</item>
         <item name="android:fontFamily">sans-serif-medium</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">?android:attr/textColorPrimary</item>
-    </style>
+    </style>-->
 
 </resources>

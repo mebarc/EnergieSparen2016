@@ -14,7 +14,17 @@
             android:hint="@string/strom_defaultValue"
             android:maxLines="1"
             android:selectAllOnFocus="true"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+
+
+
+            android:id="@+id/editText_strom_preis"
+
+
+            />
 
         <EditTextPreference
             android:defaultValue="100"
@@ -67,7 +77,7 @@
         <EditTextPreference
             android:capitalize="words"
             android:defaultValue="John Smith"
-            android:inputType="textCapWords"
+            android:inputType="number"
             android:key="example_text"
             android:maxLines="1"
             android:selectAllOnFocus="true"
