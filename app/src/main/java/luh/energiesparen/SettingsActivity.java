@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 
+
 public class SettingsActivity extends AppCompatActivity {
     private Toolbar mToolbar;
 
