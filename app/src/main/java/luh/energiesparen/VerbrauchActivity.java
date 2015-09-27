@@ -184,7 +184,7 @@ public class VerbrauchActivity extends AppCompatActivity {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + delay, pendingIntent);
-        Toast.makeText(this, "Alarm Started", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Erinnerung in einer Woche", Toast.LENGTH_SHORT).show();
 
     }
 
