@@ -23,5 +23,7 @@ public class VerbrauchActivity extends AppCompatActivity {
             }
         }
 
+
+
     }
 }

@@ -37,6 +37,7 @@
         <activity android:name=".VerbrauchActivity"
             android:label="Verbrauch"
             android:parentActivityName=".MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
             android:configChanges="orientation|screenSize|keyboardHidden">
         </activity>
     </application>
