@@ -176,8 +176,8 @@ public class VerbrauchActivity extends AppCompatActivity {
     }
 
     public void remindAlert(View view) {
-//        long delay = 1000*60*60*24*7;
-        long delay = 1000 * 5;
+        long delay = 1000*60*60*24*7;
+//        long delay = 1000 * 5;
 
 
         Intent intent = new Intent(this, NotificationPublisher.class);
