@@ -11,7 +11,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView_rechtliches01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -19,12 +19,12 @@
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView_rechtliches02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="4dp"
         android:autoLink="web"
-        android:text="Icons made by Freepik from\nhttp://www.flaticon.com\nare licensed under Creative Commons BY 3.0"
+        android:text="@string/rechtliches02_icons"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 </LinearLayout>

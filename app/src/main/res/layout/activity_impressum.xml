@@ -13,13 +13,8 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/impressum"
-        android:id="@+id/textView3"
+        android:id="@+id/textView_impressum01"
         android:layout_gravity="center_horizontal" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView5"
-        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>
