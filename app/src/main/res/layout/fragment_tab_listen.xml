@@ -3,12 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center">
 
     <ListView
         android:id="@+id/tipsliste"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingLeft="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:choiceMode="none"
+        android:clickable="false">
         <!--
         android:listSelector="@android:color/transparent"
         android:cacheColorHint="@android:color/transparent"
