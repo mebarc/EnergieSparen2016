@@ -25,6 +25,14 @@
     <string name="tab_item_01">Bad</string>
     <string name="tab_item_02">Küche</string>
     <string name="tab_item_03">Wohnung</string>
+    <string name="RadioButton_Strom_Text">Strom</string>
+    <string name="RadioButton_Gas_Text">Gas</string>
+    <string name="RadioButton_Wasser_Text">Wasser</string>
+    <string name="Hint_Woche0">aktueller Wert</string>
+    <string name="Hint_Woche1">eine Woche später</string>
+    <string name="Einheit">Einheit</string>
+    <string name="Button_calc_text">calc button\nBORDERLESS</string>
+    <string name="Button_remind_text">remind button</string>
     <!--<string name="tab_item_04">Keller</string>-->
 
     <string-array name="sTabtitles">

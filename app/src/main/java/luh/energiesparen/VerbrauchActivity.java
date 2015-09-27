@@ -42,13 +42,13 @@ public class VerbrauchActivity extends AppCompatActivity {
         }
 
         radioGroup = (RadioGroup) findViewById(R.id.RadioGroupLayout);
-        editText1 = (EditText) findViewById(R.id.editText);
-        editText2 = (EditText) findViewById(R.id.editText2);
-        ergField = (TextView) findViewById(R.id.textView7);
-        calc = (Button) findViewById(R.id.button);
+        editText1 = (EditText) findViewById(R.id.editText_Woche0);
+        editText2 = (EditText) findViewById(R.id.editText_Woche1);
+        ergField = (TextView) findViewById(R.id.textView_ergebnis);
+        calc = (Button) findViewById(R.id.button_calc);
 
         // Init Fields
-        onRadioButtonClicked(findViewById(R.id.radioButton));
+        onRadioButtonClicked(findViewById(R.id.radioButton_Strom));
 
         editText1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -62,13 +62,13 @@ public class VerbrauchActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPref.edit();
 
                 switch (radioGroup.getCheckedRadioButtonId()) {
-                    case R.id.radioButton:
+                    case R.id.radioButton_Strom:
                         editor.putString("wert1a", charSequence.toString());
                         break;
-                    case R.id.radioButton2:
+                    case R.id.radioButton_Gas:
                         editor.putString("wert2a", charSequence.toString());
                         break;
-                    case R.id.radioButton3:
+                    case R.id.radioButton_Wasser:
                         editor.putString("wert3a", charSequence.toString());
                         break;
                 }
@@ -94,13 +94,13 @@ public class VerbrauchActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPref.edit();
 
                 switch (radioGroup.getCheckedRadioButtonId()) {
-                    case R.id.radioButton:
+                    case R.id.radioButton_Strom:
                         editor.putString("wert1b", charSequence.toString());
                         break;
-                    case R.id.radioButton2:
+                    case R.id.radioButton_Gas:
                         editor.putString("wert2b", charSequence.toString());
                         break;
-                    case R.id.radioButton3:
+                    case R.id.radioButton_Wasser:
                         editor.putString("wert3b", charSequence.toString());
                         break;
                 }
@@ -152,7 +152,7 @@ public class VerbrauchActivity extends AppCompatActivity {
                     Float fpreis = Float.parseFloat(preis);
                     if (value < 0 || fpreis < 0) ergField.setText("Fehler in der Berechnung2");
                     else {
-                        if(radioGroup.getCheckedRadioButtonId() == R.id.radioButton3) {
+                        if(radioGroup.getCheckedRadioButtonId() == R.id.radioButton_Wasser) {
                             // Umrechnung von kWh = m^3 * Brennwert * Zustandszahl
                             // Brennwert = 10
                             // Zustandszahl = 0.95
@@ -197,7 +197,7 @@ public class VerbrauchActivity extends AppCompatActivity {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
         switch (view.getId()) {
-            case R.id.radioButton:
+            case R.id.radioButton_Strom:
                 if (checked) {
 //                    Toast.makeText(VerbrauchActivity.this, "button1", Toast.LENGTH_SHORT).show();
                     einheit1.setText(einheiten[0]);
@@ -206,7 +206,7 @@ public class VerbrauchActivity extends AppCompatActivity {
                     editText2.setText(sharedPref.getString("wert1b", ""));
                 }
                 break;
-            case R.id.radioButton2:
+            case R.id.radioButton_Gas:
                 if (checked) {
 //                    Toast.makeText(VerbrauchActivity.this, "button2", Toast.LENGTH_SHORT).show();
                     einheit1.setText(einheiten[1]);
@@ -215,7 +215,7 @@ public class VerbrauchActivity extends AppCompatActivity {
                     editText2.setText(sharedPref.getString("wert2b", ""));
                 }
                 break;
-            case R.id.radioButton3:
+            case R.id.radioButton_Wasser:
                 if (checked) {
 //                    Toast.makeText(VerbrauchActivity.this, "button3", Toast.LENGTH_SHORT).show();
                     einheit1.setText(einheiten[2]);
@@ -232,13 +232,13 @@ public class VerbrauchActivity extends AppCompatActivity {
 
         int selection = 0;
         switch (radioGroup.getCheckedRadioButtonId()) {
-            case R.id.radioButton:
+            case R.id.radioButton_Strom:
                 selection = 0;
                 break;
-            case R.id.radioButton2:
+            case R.id.radioButton_Gas:
                 selection = 1;
                 break;
-            case R.id.radioButton3:
+            case R.id.radioButton_Wasser:
                 selection = 2;
                 break;
         }

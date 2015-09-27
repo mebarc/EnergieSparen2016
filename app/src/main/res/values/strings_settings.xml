@@ -19,4 +19,8 @@
     <string name="KEY_STROM">preis_strom</string>
     <string name="KEY_GAS">preis_gas</string>
     <string name="KEY_WASSER">preis_wasser</string>
+
+    <string name="Hint_Strom">Der Standardwert ist 29.7 Cent je kWh</string>
+    <string name="Hint_Gas">Der Standardwert ist 6.8 Cent je kWh</string>
+    <string name="Hint_Wasser">Der Standardwert ist 169 Cent je m^3</string>
 </resources>
