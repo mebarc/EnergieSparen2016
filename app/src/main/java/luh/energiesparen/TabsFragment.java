@@ -11,9 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class TabsFragment extends Fragment {
 
     private static String TAB_TITLES = "tab_titles";
@@ -90,8 +87,7 @@ public class TabsFragment extends Fragment {
 
         @Override
         public Fragment getItem(int position) {
-/*            String[] inhalte = {"etc19", "etc29", "cte39"};
-            return TabListenFragment.newInstance(inhalte);*/
+
 
             switch (position) {
                 case 0:

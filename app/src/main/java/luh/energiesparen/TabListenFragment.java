@@ -9,13 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.ArrayList;
-import java.util.List;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class TabListenFragment extends Fragment {
 
     public static final String ARG_LISTE = "ARG_LISTE";
@@ -46,7 +41,6 @@ public class TabListenFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
- //       ListView lv = (ListView) getActivity().findViewById(R.id.tipsliste);
         ListView lv = new ListView(getActivity());
                 ArrayAdapter<String> itemsAdapter =
                 new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, inhalte);

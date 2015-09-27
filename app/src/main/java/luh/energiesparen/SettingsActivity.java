@@ -1,7 +1,5 @@
 package luh.energiesparen;
 
-
-
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -12,7 +10,6 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
-
 
 
 public class SettingsActivity extends AppCompatActivity {
@@ -68,6 +65,7 @@ public class SettingsActivity extends AppCompatActivity {
                                         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
                                         SharedPreferences.Editor editor = sharedPref.edit();
                                         editor.putString("preis_strom", "666");
+
                                         editor.apply();
                                         Toast.makeText(getActivity(), "Standard wiederhergestellt", Toast.LENGTH_SHORT).show();
                                         getActivity().finish();
@@ -82,13 +80,10 @@ public class SettingsActivity extends AppCompatActivity {
                                 .create();
                         myAlert.show();
                     }
-
                     return false;
                 }
             });
-
         }
-
 
     }
 }

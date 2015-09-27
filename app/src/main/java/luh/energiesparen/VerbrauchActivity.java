@@ -1,16 +1,11 @@
 package luh.energiesparen;
 
 import android.app.AlarmManager;
-import android.app.Notification;
-import android.app.NotificationManager;
 import android.app.PendingIntent;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.preference.PreferenceManager;
-import android.support.v4.app.NotificationCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
@@ -30,7 +25,6 @@ public class VerbrauchActivity extends AppCompatActivity {
     private EditText editText2;
     private RadioGroup radioGroup;
     private Button calc;
-    private Button remind;
     private TextView ergField;
 
 
@@ -135,6 +129,7 @@ public class VerbrauchActivity extends AppCompatActivity {
                         wertA = sharedPref.getString("wert1a", "ERR");
                         wertB = sharedPref.getString("wert1b", "ERR");
                         preis = sharedPref.getString("preis_strom", "ERR");
+
                         break;
                     case 1:
                         wertA = sharedPref.getString("wert2a", "ERR");
@@ -162,8 +157,8 @@ public class VerbrauchActivity extends AppCompatActivity {
                         jeMonat = String.format("%.2f", value * 4);
                         jeJahr = String.format("%.2f", value * 52);
                         ergField.setText("Kosten je Woche: " + jeWoche + "€\n" +
-                                "Kosten je Monat: " + jeMonat + "€\n" +
-                                "Kosten je Jahr: " + jeJahr + "€\n");
+                                        "Kosten je Monat: " + jeMonat + "€\n" +
+                                        "Kosten je Jahr: " + jeJahr + "€\n");
                     }
 
                 }
@@ -176,26 +171,11 @@ public class VerbrauchActivity extends AppCompatActivity {
 //        long delay = 1000*60*60*24*7;
         long delay = 1000 * 5;
 
-        /*Notification.Builder builder = new Notification.Builder(this);
-        builder.setContentTitle("Scheduled Notification");
-        builder.setContentText("Notification text");
-        builder.setSmallIcon(R.drawable.ic_strom);
-        builder.setAutoCancel(true);
-
-
-        Intent notificationIntent = new Intent(this, NotificationPublisher.class);
-        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION_ID, 1);
-        notificationIntent.putExtra(NotificationPublisher.NOTIFICATION, builder.build());
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, notificationIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-
-        long futureInMillis = SystemClock.elapsedRealtime() + delay;
-        AlarmManager alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        alarmManager.set(AlarmManager.ELAPSED_REALTIME_WAKEUP, futureInMillis, pendingIntent);*/
 
         Intent intent = new Intent(this, NotificationPublisher.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
-        AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
-        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + (1000 * 5), pendingIntent);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + delay, pendingIntent);
         Toast.makeText(this, "Alarm Started", Toast.LENGTH_SHORT).show();
 
     }

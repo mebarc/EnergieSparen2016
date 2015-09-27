@@ -5,84 +5,60 @@
     <PreferenceCategory android:title="Verbrauchspreise">
 
         <EditTextPreference
+            android:id="@+id/editText_strom_preis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:defaultValue="@string/strom_defaultValue"
-            android:inputType="number"
-            android:key="preis_strom"
-            android:title="@string/strom_preis"
-            android:dialogTitle="@string/strom_preis"
             android:dialogMessage="  Eingabe in Cent je kWh"
-            android:hint="@string/strom_defaultValue"
+            android:dialogTitle="@string/strom_preis"
+            android:ems="10"
+            android:hint="Der Standardwert ist 55 € je kWh"
+            android:inputType="numberDecimal"
+            android:key="preis_strom"
             android:maxLines="1"
             android:selectAllOnFocus="true"
             android:singleLine="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-
-
-
-            android:id="@+id/editText_strom_preis"
-
-
-            />
+            android:title="@string/strom_preis"
+            android:summary="Eigenen Strompreis festlegen"/>
 
         <EditTextPreference
             android:defaultValue="100"
-            android:inputType="number"
-            android:key="preis_gas"
-            android:title="@string/gas_preis"
+            android:dialogMessage="  Eingabe in Cent je kWh (kWh)"
             android:dialogTitle="@string/gas_preis"
-            android:dialogMessage="  Eingabe in Cent je Kubikmeter (m^3)"
+            android:inputType="numberDecimal"
+            android:key="preis_gas"
             android:maxLines="1"
             android:selectAllOnFocus="true"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:title="@string/gas_preis"
+            android:hint="Der Standardwert ist 100 € je kWh"/>
 
         <EditTextPreference
             android:defaultValue="100"
-            android:inputType="number"
-            android:key="preis_wasser"
-            android:title="@string/wasser_preis"
-            android:dialogTitle="@string/wasser_preis"
             android:dialogMessage="  Eingabe in Cent je Kubikmeter (m^3)"
+            android:dialogTitle="@string/wasser_preis"
+            android:inputType="numberDecimal"
+            android:key="preis_wasser"
             android:maxLines="1"
             android:selectAllOnFocus="true"
-            android:singleLine="true"/>
+            android:singleLine="true"
+            android:title="@string/wasser_preis"
+            android:hint="Der Standardwert ist 100 € je m^3"/>
 
 
     </PreferenceCategory>
 
-    <Preference
-        android:title="Werkseinstellungen"
-        android:key="resetbutton"
-        >
-    </Preference>
 
-    <PreferenceCategory android:title="sonstiges / test ">
 
-        <ListPreference
-            android:defaultValue="-1"
-            android:entries="@array/pref_example_list_titles"
-            android:entryValues="@array/pref_example_list_values"
-            android:key="example_list"
-            android:negativeButtonText="@null"
-            android:positiveButtonText="@null"
-            android:title="Add friends to message" />
+    <PreferenceCategory android:title="Sonstiges">
 
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:key="example_checkbox"
-            android:summary="Recommendations for people to contact based on your message history"
-            android:title="Enable social recommendations" />
+        <Preference
+            android:key="resetbutton"
+            android:title="Werkseinstellungen">
 
-        <EditTextPreference
-            android:capitalize="words"
-            android:defaultValue="John Smith"
-            android:inputType="number"
-            android:key="example_text"
-            android:maxLines="1"
-            android:selectAllOnFocus="true"
-            android:singleLine="true"
-            android:title="Display Name" />
+        </Preference>
+
+
     </PreferenceCategory>
 
 

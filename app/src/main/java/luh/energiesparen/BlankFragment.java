@@ -26,6 +26,4 @@ public class BlankFragment extends Fragment {
         textView.setText(R.string.hello_blank_fragment);
         return textView;
     }
-
-
 }

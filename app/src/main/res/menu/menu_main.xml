@@ -13,11 +13,11 @@
         android:id="@+id/action_rechtliches"
         android:orderInCategory="101"
         android:title="@string/action_rechtliches"
-        app:showAsAction="never"  />
+        app:showAsAction="never" />
 
     <item
         android:id="@+id/action_impressum"
         android:orderInCategory="102"
         android:title="@string/action_impressum"
-        app:showAsAction="never"  />
+        app:showAsAction="never" />
 </menu>

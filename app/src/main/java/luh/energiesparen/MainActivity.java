@@ -1,13 +1,11 @@
 package luh.energiesparen;
 
-import android.content.Context;
+
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -24,12 +22,11 @@ public class MainActivity extends AppCompatActivity {
     private NavigationView mNavigationView;
     private ActionBarDrawerToggle mActionBarDrawerToggle;
     private FragmentManager mFragmentManager;
-    private FragmentTransaction mFragmentTransaction;
     private static final String STATE_SELECTED_POSITION = "selected_navigation_drawer_position";
     private int mCurrentSelectedPosition;
     private boolean mFromSavedInstanceState;
     private String[] titles;
-    private int settingsposition = 4;
+    private int settingsposition = 5;
     
 
 
@@ -82,30 +79,31 @@ public class MainActivity extends AppCompatActivity {
                                 getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
                                 mCurrentSelectedPosition = 0;
                                 break;
-                            /*case R.id.nav_item_02_etc:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new BlankFragment()).commit();
-                                mCurrentSelectedPosition = 1;
-                                break;*/
-                            case R.id.nav_item_03_heizen:
+
+                            case R.id.nav_item_02_heizen:
                                 getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.sTabtitles),
-                                        getResources().getStringArray(R.array.STROMBAD), getResources().getStringArray(R.array.STROMKUECHE), getResources().getStringArray(R.array.STROMwohnung))).commit();
+                                        getResources().getStringArray(R.array.HEIZENBAD), getResources().getStringArray(R.array.HEIZENKUECHE), getResources().getStringArray(R.array.HEIZENWOHNUNG))).commit();
+                                mCurrentSelectedPosition = 1;
+                                break;
+
+                            case R.id.nav_item_03_lueften:
+                                getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.sTabtitles),
+                                        getResources().getStringArray(R.array.LUFTBAD), getResources().getStringArray(R.array.LUFTKUECHE), getResources().getStringArray(R.array.LUFTWOHNUNG))).commit();
                                 mCurrentSelectedPosition = 2;
                                 break;
-                            case R.id.nav_item_04_lueften:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.sTabtitles),getResources().getStringArray(R.array.STROMKUECHE),
-                                        getResources().getStringArray(R.array.STROMwohnung), getResources().getStringArray(R.array.STROMBAD))).commit();
+
+                            case R.id.nav_item_04_strom:
+                                getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.sTabtitles),
+                                        getResources().getStringArray(R.array.STROMBAD), getResources().getStringArray(R.array.STROMKUECHE), getResources().getStringArray(R.array.STROMWOHNUNG))).commit();
                                 mCurrentSelectedPosition = 3;
                                 break;
-                            case R.id.nav_item_05_strom:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.sTabtitles),getResources().getStringArray(R.array.STROMKUECHE),
-                                        getResources().getStringArray(R.array.STROMwohnung), getResources().getStringArray(R.array.STROMBAD))).commit();
-                                mCurrentSelectedPosition = 3;
+
+                            case R.id.nav_item_05_wasser:
+                                getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.sTabtitles),
+                                        getResources().getStringArray(R.array.WASSERBAD), getResources().getStringArray(R.array.WASSERKUECHE), getResources().getStringArray(R.array.WASSERWOHNUNG))).commit();
+                                mCurrentSelectedPosition = 4;
                                 break;
-                            case R.id.nav_item_06_wasser:
-                                getSupportFragmentManager().beginTransaction().replace(R.id.flContent, TabsFragment.newInstance(getResources().getStringArray(R.array.sTabtitles),getResources().getStringArray(R.array.STROMKUECHE),
-                                        getResources().getStringArray(R.array.STROMwohnung), getResources().getStringArray(R.array.STROMBAD))).commit();
-                                mCurrentSelectedPosition = 3;
-                                break;
+
                             case R.id.nav_sub_item_01_settings:
                                 mCurrentSelectedPosition = settingsposition;
                                 startSettings();

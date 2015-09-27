@@ -9,11 +9,10 @@
     <string name="drawer_close">Close navigation drawer</string>
 
     <string name="nav_item_01">Home</string>
-    <string name="nav_item_02">ETC</string>
-    <string name="nav_item_03">Heizen</string>
-    <string name="nav_item_04">Lüften</string>
-    <string name="nav_item_05">Stromverbrauch</string>
-    <string name="nav_item_06">Wasserverbrauch</string>
+    <string name="nav_item_02">Heizen</string>
+    <string name="nav_item_03">Lüften</string>
+    <string name="nav_item_04">Stromverbrauch</string>
+    <string name="nav_item_05">Wasserverbrauch</string>
 
     <string-array name="navTitles">
         <item>@string/nav_item_01</item>
@@ -21,7 +20,6 @@
         <item>@string/nav_item_03</item>
         <item>@string/nav_item_04</item>
         <item>@string/nav_item_05</item>
-        <item>@string/nav_item_06</item>
     </string-array>
 
     <string name="tab_item_01">Bad</string>
@@ -35,41 +33,5 @@
         <item>@string/tab_item_03</item>
     </string-array>
 
-    <string name="StromKueche01">STROMk01</string>
-    <string name="StromKueche02">Dies ist ein sehr sehr langer Tip.\nAm besten kann
-    man damit direkt mal testen, wie so eine Wall of Text dann am Ende aussieht.</string>
 
-    <string-array name="STROMKUECHE">
-        <item>@string/StromKueche01</item>
-        <item>@string/StromKueche02</item>
-    </string-array>
-
-    <string name="StromBad01">STROMBAD01</string>
-    <string name="StromBad02">STROMBAD02</string>
-
-    <string-array name="STROMBAD">
-        <item>@string/StromBad01</item>
-        <item>@string/StromBad01</item>
-    </string-array>
-
-    <string name="Stromwohnung01">STROMkD01</string>
-    <string name="Stromwohnung02">STROMWD02</string>
-    <string name="Stromwohnung03">STROMWD03</string>
-    <string name="Stromwohnung04">STROMWD04</string>
-
-    <string-array name="STROMwohnung">
-        <item>@string/Stromwohnung01</item>
-        <item>@string/Stromwohnung02</item>
-       <item>@string/Stromwohnung03</item>
-    <item>@string/Stromwohnung04</item>
-</string-array>
-
-
-
-    <string name="strom_preis">Strompreis</string>
-    <string name="gas_preis">Gaspreis</string>
-    <string name="wasser_preis">Wasserpreis</string>
-    <string name="hello_blank_fragment">sonstiges Fragment</string>
-    <string name="rechtliches">Rechtliches</string>
-    <string name="impressum">Impressum</string>
 </resources>

@@ -1,12 +1,9 @@
 package luh.energiesparen;
 
-import android.content.Context;
-import android.content.SharedPreferences;
+
 import android.os.Bundle;
-import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.widget.TextView;
 
 
 public class ImpressumActivity extends AppCompatActivity {
@@ -25,12 +22,5 @@ public class ImpressumActivity extends AppCompatActivity {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             }
         }
-
-        TextView textView = (TextView) findViewById(R.id.textView5);
-        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        String score = sharedPref.getString("preis_strom", "0");
-
-        textView.setText(score);
-
     }
 }

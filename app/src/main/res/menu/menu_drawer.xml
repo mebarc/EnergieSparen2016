@@ -1,50 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group android:checkableBehavior="single"
-        android:id="@+id/nav_group1">
+    <group
+        android:id="@+id/nav_group1"
+        android:checkableBehavior="single">
 
         <item
             android:id="@+id/nav_item_01_home"
             android:checked="true"
-            android:title="@string/nav_item_01"
-            android:icon="@drawable/ic_home"/>
-        <!--<item
-            android:id="@+id/nav_item_02_etc"
-            android:checked="false"
-            android:title="@string/nav_item_02" />-->
+            android:icon="@drawable/ic_home"
+            android:title="@string/nav_item_01" />
 
         <item
-            android:id="@+id/nav_item_03_heizen"
+            android:id="@+id/nav_item_02_heizen"
             android:checked="false"
-            android:title="@string/nav_item_03"
-            android:icon="@drawable/ic_heizen"/>
+            android:icon="@drawable/ic_heizen"
+            android:title="@string/nav_item_02" />
         <item
-            android:id="@+id/nav_item_04_lueften"
+            android:id="@+id/nav_item_03_lueften"
             android:checked="false"
-            android:title="@string/nav_item_04"
-            android:icon="@drawable/ic_wind"/>
+            android:icon="@drawable/ic_wind"
+            android:title="@string/nav_item_03" />
         <item
-            android:id="@+id/nav_item_05_strom"
+            android:id="@+id/nav_item_04_strom"
             android:checked="false"
-            android:title="@string/nav_item_05"
-            android:icon="@drawable/ic_strom"/>
+            android:icon="@drawable/ic_strom"
+            android:title="@string/nav_item_04" />
         <item
-            android:id="@+id/nav_item_06_wasser"
+            android:id="@+id/nav_item_05_wasser"
             android:checked="false"
-            android:title="@string/nav_item_06"
-            android:icon="@drawable/ic_water"/>
+            android:icon="@drawable/ic_water"
+            android:title="@string/nav_item_05" />
 
 
         <item android:title="Sonstiges">
             <menu>
-                <item android:title="Settings"
+                <item
                     android:id="@+id/nav_sub_item_01_settings"
                     android:checkable="false"
-                    android:icon="@drawable/ic_settings"/>
+                    android:icon="@drawable/ic_settings"
+                    android:title="Settings" />
 
-                <item android:title="Sub item 2"
-                    android:checkable="false"/>
             </menu>
 
         </item>

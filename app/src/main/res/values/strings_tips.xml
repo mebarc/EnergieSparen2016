@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+     <!--STROM-->
+
+    <string name="StromKueche01">STROMk01</string>
+    <string name="StromKueche02">Dies ist ein sehr sehr langer Tip.\nAm besten kann
+    man damit direkt mal testen, wie so eine Wall of Text dann am Ende aussieht.</string>
+
+    <string-array name="STROMKUECHE">
+        <item>@string/StromKueche01</item>
+        <item>@string/StromKueche02</item>
+    </string-array>
+
+    <string name="StromBad01">STROMBAD01</string>
+    <string name="StromBad02">STROMBAD02</string>
+
+    <string-array name="STROMBAD">
+        <item>@string/StromBad01</item>
+        <item>@string/StromBad01</item>
+    </string-array>
+
+    <string name="StromWohnung01">STROMkD01</string>
+    <string name="StromWohnung02">STROMWD02</string>
+    <string name="StromWohnung03">STROMWD03</string>
+    <string name="StromWohnung04">STROMWD04</string>
+
+    <string-array name="STROMWOHNUNG">
+        <item>@string/StromWohnung01</item>
+        <item>@string/StromWohnung02</item>
+        <item>@string/StromWohnung03</item>
+        <item>@string/StromWohnung04</item>
+    </string-array>
+
+
+    <!--Wasser-->
+
+    <string name="WasserKueche01">WASSERk01</string>
+    <string name="WasserKueche02">Dies ist ein sehr sehr langer Tip.\nAm besten kann
+    man damit direkt mal testen, wie so eine Wall of Text dann am Ende aussieht.</string>
+
+    <string-array name="WASSERKUECHE">
+        <item>@string/WasserKueche01</item>
+        <item>@string/WasserKueche02</item>
+    </string-array>
+
+    <string name="WasserBad01">WASSERBAD01</string>
+    <string name="WasserBad02">WASSERBAD02</string>
+
+    <string-array name="WASSERBAD">
+        <item>@string/WasserBad01</item>
+        <item>@string/WasserBad01</item>
+    </string-array>
+
+    <string name="WasserWohnung01">WASSERkD01</string>
+    <string name="WasserWohnung02">WASSERWD02</string>
+    <string name="WasserWohnung03">WASSERWD03</string>
+    <string name="WasserWohnung04">WASSERWD04</string>
+
+    <string-array name="WASSERWOHNUNG">
+        <item>@string/WasserWohnung01</item>
+        <item>@string/WasserWohnung02</item>
+        <item>@string/WasserWohnung03</item>
+        <item>@string/WasserWohnung04</item>
+    </string-array>
+
+    <!--Luft-->
+
+    <string name="LuftKueche01">LUFTk01</string>
+    <string name="LuftKueche02">Dies ist ein sehr sehr langer Tip.\nAm besten kann
+    man damit direkt mal testen, wie so eine Wall of Text dann am Ende aussieht.</string>
+
+    <string-array name="LUFTKUECHE">
+        <item>@string/LuftKueche01</item>
+        <item>@string/LuftKueche02</item>
+    </string-array>
+
+    <string name="LuftBad01">LUFTBAD01</string>
+    <string name="LuftBad02">LUFTBAD02</string>
+
+    <string-array name="LUFTBAD">
+        <item>@string/LuftBad01</item>
+        <item>@string/LuftBad01</item>
+    </string-array>
+
+    <string name="LuftWohnung01">LUFTkD01</string>
+    <string name="LuftWohnung02">LUFTWD02</string>
+    <string name="LuftWohnung03">LUFTWD03</string>
+    <string name="LuftWohnung04">LUFTWD04</string>
+
+    <string-array name="LUFTWOHNUNG">
+        <item>@string/LuftWohnung01</item>
+        <item>@string/LuftWohnung02</item>
+        <item>@string/LuftWohnung03</item>
+        <item>@string/LuftWohnung04</item>
+    </string-array>
+
+    <!--Heizen-->
+
+    <string name="HeizenKueche01">HEIZENk01</string>
+    <string name="HeizenKueche02">Dies ist ein sehr sehr langer Tip.\nAm besten kann
+    man damit direkt mal testen, wie so eine Wall of Text dann am Ende aussieht.</string>
+
+    <string-array name="HEIZENKUECHE">
+        <item>@string/HeizenKueche01</item>
+        <item>@string/HeizenKueche02</item>
+    </string-array>
+
+    <string name="HeizenBad01">HEIZENBAD01</string>
+    <string name="HeizenBad02">HEIZENBAD02</string>
+
+    <string-array name="HEIZENBAD">
+        <item>@string/HeizenBad01</item>
+        <item>@string/HeizenBad01</item>
+    </string-array>
+
+    <string name="HeizenWohnung01">HEIZENkD01</string>
+    <string name="HeizenWohnung02">HEIZENWD02</string>
+    <string name="HeizenWohnung03">HEIZENWD03</string>
+    <string name="HeizenWohnung04">HEIZENWD04</string>
+
+    <string-array name="HEIZENWOHNUNG">
+        <item>@string/HeizenWohnung01</item>
+        <item>@string/HeizenWohnung02</item>
+        <item>@string/HeizenWohnung03</item>
+        <item>@string/HeizenWohnung04</item>
+    </string-array>
+
+    <string name="strom_preis">Strompreis</string>
+    <string name="gas_preis">Gaspreis</string>
+    <string name="wasser_preis">Wasserpreis</string>
+    <string name="hello_blank_fragment">sonstiges Fragment</string>
+    <string name="rechtliches">Rechtliches</string>
+    <string name="impressum">Impressum</string>
+</resources>
