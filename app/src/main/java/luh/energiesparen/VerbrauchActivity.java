@@ -8,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -20,6 +21,9 @@ public class VerbrauchActivity extends AppCompatActivity {
     private EditText editText1;
     private EditText editText2;
     private RadioGroup radioGroup;
+    private Button calc;
+    private Button remind;
+    private TextView ergField;
 
 
     @Override
@@ -38,6 +42,11 @@ public class VerbrauchActivity extends AppCompatActivity {
         radioGroup = (RadioGroup) findViewById(R.id.RadioGroupLayout);
         editText1 = (EditText) findViewById(R.id.editText);
         editText2 = (EditText) findViewById(R.id.editText2);
+        ergField = (TextView) findViewById(R.id.textView7);
+        calc = (Button) findViewById(R.id.button);
+
+        // Init Fields
+        onRadioButtonClicked(findViewById(R.id.radioButton));
 
         editText1.addTextChangedListener(new TextWatcher() {
             @Override
@@ -104,6 +113,57 @@ public class VerbrauchActivity extends AppCompatActivity {
         });
 
 
+        calc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String wertA = "";
+                String wertB = "";
+                String preis = "";
+                String jeWoche, jeMonat, jeJahr;
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+
+                switch (getSelectedRadioButton()) {
+                    case 0:
+                        wertA = sharedPref.getString("wert1a", "ERR");
+                        wertB = sharedPref.getString("wert1b", "ERR");
+                        preis = sharedPref.getString("preis_strom", "ERR");
+                        break;
+                    case 1:
+                        wertA = sharedPref.getString("wert2a", "ERR");
+                        wertB = sharedPref.getString("wert2b", "ERR");
+                        preis = sharedPref.getString("preis_gas", "ERR");
+                        break;
+                    case 2:
+                        wertA = sharedPref.getString("wert3a", "ERR");
+                        wertB = sharedPref.getString("wert3b", "ERR");
+                        preis = sharedPref.getString("preis_wasser", "ERR");
+                        break;
+                }
+
+                if (wertA.equals("ERR") || wertB.equals("ERR")|| preis.equals("ERR")) ergField.setText("Fehler in der Berechnung0");
+                else if (wertA.equals("") || wertB.equals("")|| preis.equals("")) ergField.setText("Fehler in der Berechnung1");
+                else {
+                    Float value = Float.parseFloat(wertB) - Float.parseFloat(wertA);
+                    Float fpreis = Float.parseFloat(preis);
+                    if(value < 0 || fpreis < 0) ergField.setText("Fehler in der Berechnung2");
+                    else {
+                        value *= fpreis;
+                        jeWoche = String.format("%.2f", value);
+                        jeMonat = String.format("%.2f", value*4);
+                        jeJahr = String.format("%.2f", value*52);
+                        ergField.setText(   "Kosten je Woche: " + jeWoche + "€\n" +
+                                            "Kosten je Monat: " + jeMonat + "€\n" +
+                                            "Kosten je Jahr: " + jeJahr + "€\n");
+                    }
+
+                }
+            }
+        });
+
+    }
+
+    public void remindAlert(View view) {
+
     }
 
     public void onRadioButtonClicked(View view) {
@@ -143,4 +203,23 @@ public class VerbrauchActivity extends AppCompatActivity {
                 break;
         }
     }
+
+
+    protected int getSelectedRadioButton() {
+
+        int selection = 0;
+        switch (radioGroup.getCheckedRadioButtonId()) {
+            case R.id.radioButton:
+                selection = 0;
+                break;
+            case R.id.radioButton2:
+                selection = 1;
+                break;
+            case R.id.radioButton3:
+                selection = 2;
+                break;
+        }
+        return selection;
+    }
+
 }

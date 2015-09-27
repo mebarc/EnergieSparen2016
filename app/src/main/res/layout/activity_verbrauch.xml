@@ -10,150 +10,179 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
-<ScrollView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/toolbar"
-    android:layout_marginLeft="12dp"
-    android:layout_marginTop="4dp"
-    android:layout_marginRight="12dp"
-    android:layout_marginBottom="4dp">
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_centerHorizontal="true"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/radiolayout"
-        android:layout_below="@+id/textView6"
-        android:orientation="vertical">
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="4dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="4dp">
 
-
-
-    <RadioGroup
-        android:id="@+id/RadioGroupLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
+        <RelativeLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:checked="true"
-            android:onClick="onRadioButtonClicked"/>
-
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:onClick="onRadioButtonClicked"/>
-
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:onClick="onRadioButtonClicked"/>
-
-    </RadioGroup>
-
-    </LinearLayout>
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/radiolayout"
-    android:orientation="vertical"
-    android:id="@+id/edittextlayout">
+            android:orientation="vertical">
 
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:hint="aktueller Wert"/>
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal"
-        android:ems="10"
-        android:id="@+id/editText2"
-        android:hint="eine Woche später"
-        android:layout_below="@+id/editText" />
-    
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText"
-        android:text="Einheit"
-        android:layout_alignBaseline="@+id/editText"
-        android:id="@+id/textView_einheit1"/>
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editText2"
-        android:text="Einheit2"
-        android:layout_alignBaseline="@+id/editText2"
-        android:id="@+id/textView_einheit2"/>
-    
-    
-</RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/buttonlayout"
-        android:layout_below="@+id/edittextlayout">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button2" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonlayout">
+            <LinearLayout
+                android:id="@+id/radiolayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView6"
+                android:orientation="vertical">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew Text"
-            android:id="@+id/textView7" />
+                <RadioGroup
+                    android:id="@+id/RadioGroupLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="6dp">
 
-    </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="New RadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="New RadioButton" />
+
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="New RadioButton" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/edittextlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/radiolayout"
+                android:orientation="vertical"
+                android:layout_marginTop="6dp">
+
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="aktueller Wert"
+                    android:inputType="numberDecimal"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true" />
+
+                <EditText
+                    android:id="@+id/editText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editText"
+                    android:ems="10"
+                    android:hint="eine Woche später"
+                    android:inputType="numberDecimal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    />
+
+                <TextView
+                    android:id="@+id/textView_einheit1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/editText"
+                    android:layout_alignRight="@+id/editText"
+                    android:text="Einheit" />
+
+                <TextView
+                    android:id="@+id/textView_einheit2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/editText2"
+                    android:layout_alignRight="@+id/editText2"
+                    android:text="Einheit2" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/buttonlayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edittextlayout"
+                android:orientation="horizontal"
+                android:layout_marginTop="6dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button"
+                    style="?android:attr/borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="calc button\nBORDERLESS"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="remindAlert"
+                    android:text="remind button"
+                    android:layout_toRightOf="@+id/button"/>
+
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonlayout"
+                android:id="@+id/relativeLayout">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New TextNew TextNew "
+                    android:id="@+id/textView7"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
 
 
 </RelativeLayout>
