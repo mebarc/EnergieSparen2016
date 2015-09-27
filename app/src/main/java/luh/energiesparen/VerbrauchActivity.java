@@ -152,7 +152,15 @@ public class VerbrauchActivity extends AppCompatActivity {
                     Float fpreis = Float.parseFloat(preis);
                     if (value < 0 || fpreis < 0) ergField.setText("Fehler in der Berechnung2");
                     else {
-                        value *= fpreis;
+                        if(radioGroup.getCheckedRadioButtonId() == R.id.radioButton3) {
+                            // Umrechnung von kWh = m^3 * Brennwert * Zustandszahl
+                            // Brennwert = 10
+                            // Zustandszahl = 0.95
+                            value *= fpreis * 10 * (float) 0.95;
+                        }
+                        else {
+                            value *= fpreis;
+                        }
                         jeWoche = String.format("%.2f", value);
                         jeMonat = String.format("%.2f", value * 4);
                         jeJahr = String.format("%.2f", value * 52);

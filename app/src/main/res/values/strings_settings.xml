@@ -12,5 +12,11 @@
         <item>-1</item>
     </string-array>
 
-    <string name="strom_defaultValue">55</string>
+    <string name="strom_defaultValue">29.7</string>
+    <string name="gas_defaultValue">6.8</string>
+    <string name="wasser_defaultValue">169</string>
+
+    <string name="KEY_STROM">preis_strom</string>
+    <string name="KEY_GAS">preis_gas</string>
+    <string name="KEY_WASSER">preis_wasser</string>
 </resources>

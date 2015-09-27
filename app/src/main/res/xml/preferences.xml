@@ -12,38 +12,40 @@
             android:dialogMessage="  Eingabe in Cent je kWh"
             android:dialogTitle="@string/strom_preis"
             android:ems="10"
-            android:hint="Der Standardwert ist 55 € je kWh"
+            android:hint="Der Standardwert ist 29.7 Cent je kWh"
             android:inputType="numberDecimal"
-            android:key="preis_strom"
+            android:key="@string/KEY_STROM"
             android:maxLines="1"
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:title="@string/strom_preis"
-            android:summary="Eigenen Strompreis festlegen"/>
+            android:summary="Eigenen Strompreis eintragen"/>
 
         <EditTextPreference
-            android:defaultValue="100"
+            android:defaultValue="@string/gas_defaultValue"
             android:dialogMessage="  Eingabe in Cent je kWh (kWh)"
             android:dialogTitle="@string/gas_preis"
             android:inputType="numberDecimal"
-            android:key="preis_gas"
+            android:key="@string/KEY_GAS"
             android:maxLines="1"
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:title="@string/gas_preis"
-            android:hint="Der Standardwert ist 100 € je kWh"/>
+            android:hint="Der Standardwert ist 6.8 Cent je kWh"
+            android:summary="Eigenen Gaspreis eintragen"/>
 
         <EditTextPreference
-            android:defaultValue="100"
+            android:defaultValue="@string/wasser_defaultValue"
             android:dialogMessage="  Eingabe in Cent je Kubikmeter (m^3)"
             android:dialogTitle="@string/wasser_preis"
             android:inputType="numberDecimal"
-            android:key="preis_wasser"
+            android:key="@string/KEY_WASSER"
             android:maxLines="1"
             android:selectAllOnFocus="true"
             android:singleLine="true"
             android:title="@string/wasser_preis"
-            android:hint="Der Standardwert ist 100 € je m^3"/>
+            android:hint="Der Standardwert ist 169 Cent je m^3"
+            android:summary="Eigenen Wasserpreis eintragen"/>
 
 
     </PreferenceCategory>

@@ -64,8 +64,9 @@ public class SettingsActivity extends AppCompatActivity {
                                         dialog.dismiss();
                                         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
                                         SharedPreferences.Editor editor = sharedPref.edit();
-                                        editor.putString("preis_strom", "666");
-
+                                        editor.putString("preis_strom", getResources().getString(R.string.strom_defaultValue));
+                                        editor.putString("preis_gas", getResources().getString(R.string.gas_defaultValue));
+                                        editor.putString("preis_wasser", getResources().getString(R.string.wasser_defaultValue));
                                         editor.apply();
                                         Toast.makeText(getActivity(), "Standard wiederhergestellt", Toast.LENGTH_SHORT).show();
                                         getActivity().finish();
