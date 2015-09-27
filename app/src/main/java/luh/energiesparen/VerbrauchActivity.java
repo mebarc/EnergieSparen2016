@@ -19,6 +19,7 @@ public class VerbrauchActivity extends AppCompatActivity {
             setSupportActionBar(mToolbar);
             if(getSupportActionBar() != null) {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
             }
         }
 

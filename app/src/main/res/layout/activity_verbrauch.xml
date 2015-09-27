@@ -5,17 +5,134 @@
     android:orientation="vertical">
 
     <include
+
         layout="@layout/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/toolbar"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="12dp"
+    android:layout_marginBottom="4dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:text="Large Text"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radiolayout"
+        android:layout_below="@+id/textView6"
+        android:orientation="vertical">
+
+
+
+    <RadioGroup
+        android:id="@+id/RadioGroupLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView6"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New RadioButton" />
+
+    </RadioGroup>
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/radiolayout"
+    android:orientation="vertical"
+    android:id="@+id/edittextlayout">
+
+
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="number"
+        android:inputType="numberDecimal"
         android:ems="10"
         android:id="@+id/editText"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:hint="aktueller Wert"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:hint="eine Woche später"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/buttonlayout"
+        android:layout_below="@+id/edittextlayout">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/button2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonlayout">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew TextNew Text"
+            android:id="@+id/textView7" />
+
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
 
 </RelativeLayout>
