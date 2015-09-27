@@ -148,22 +148,23 @@ public class VerbrauchActivity extends AppCompatActivity {
                 else if (wertA.equals("") || wertB.equals("") || preis.equals(""))
                     ergField.setText("Fehler in der Berechnung1");
                 else {
-                    Float value = Float.parseFloat(wertB) - Float.parseFloat(wertA);
+                    Float amount = Float.parseFloat(wertB) - Float.parseFloat(wertA);
                     Float fpreis = Float.parseFloat(preis);
-                    if (value < 0 || fpreis < 0) ergField.setText("Fehler in der Berechnung2");
+                    if (amount < 0 || fpreis < 0) ergField.setText("Fehler in der Berechnung2");
                     else {
-                        if(radioGroup.getCheckedRadioButtonId() == R.id.radioButton_Wasser) {
+                        if(radioGroup.getCheckedRadioButtonId() == R.id.radioButton_Gas) {
                             // Umrechnung von kWh = m^3 * Brennwert * Zustandszahl
                             // Brennwert = 10
                             // Zustandszahl = 0.95
-                            value *= fpreis * 10 * (float) 0.95;
+                            amount *= fpreis * 10 * 95 / 100;
                         }
                         else {
-                            value *= fpreis;
+                            amount *= fpreis;
                         }
-                        jeWoche = String.format("%.2f", value);
-                        jeMonat = String.format("%.2f", value * 4);
-                        jeJahr = String.format("%.2f", value * 52);
+                        amount /= 100;
+                        jeWoche = String.format("%.2f", amount);
+                        jeMonat = String.format("%.2f", amount * 4);
+                        jeJahr = String.format("%.2f", amount * 52);
                         ergField.setText("Kosten je Woche: " + jeWoche + "€\n" +
                                         "Kosten je Monat: " + jeMonat + "€\n" +
                                         "Kosten je Jahr: " + jeJahr + "€\n");
