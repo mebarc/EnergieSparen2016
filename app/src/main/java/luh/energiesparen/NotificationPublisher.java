@@ -21,8 +21,8 @@ public class NotificationPublisher extends BroadcastReceiver {
         Intent in = new Intent(context, VerbrauchActivity.class);
 
         mBuilder.setSmallIcon(R.drawable.ic_strom);
-        mBuilder.setContentTitle("Notification Title");
-        mBuilder.setContentText("Notification text");
+        mBuilder.setContentTitle("EnergieSparen");
+        mBuilder.setContentText("Zählerstände ablesen und Verbrauch bestimmen");
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
         stackBuilder.addParentStack(VerbrauchActivity.class);

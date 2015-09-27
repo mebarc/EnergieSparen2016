@@ -19,11 +19,11 @@ public class TabsFragment extends Fragment {
     private static String TAB_LISTE3 = "tab_liste3";
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
-    public int int_items = 3;
-    public String[] tabstitles;
-    public String[] liste1;
-    public String[] liste2;
-    public String[] liste3;
+    public static int int_items = 3;
+    public static String[] tabstitles;
+    public static String[] liste1;
+    public static String[] liste2;
+    public static String[] liste3;
 
 
     public TabsFragment() {
@@ -79,7 +79,7 @@ public class TabsFragment extends Fragment {
         return view;
     }
 
-    class MyAdapter extends FragmentPagerAdapter {
+    private static class MyAdapter extends FragmentPagerAdapter {
 
         public MyAdapter(FragmentManager fm) {
             super(fm);

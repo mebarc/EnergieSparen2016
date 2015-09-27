@@ -15,7 +15,7 @@ public class TabListenFragment extends Fragment {
 
     public static final String ARG_LISTE = "ARG_LISTE";
 
-    private String[] inhalte;
+    private static String[] inhalte;
 
 
     public TabListenFragment() {
