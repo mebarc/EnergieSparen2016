@@ -11,10 +11,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingLeft="12dp"
-        android:paddingTop="6dp"
-        android:paddingBottom="6dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="20dp"
         android:choiceMode="none"
-        android:clickable="false">
+        android:clickable="false"
+        android:paddingRight="12dp">
         <!--
         android:listSelector="@android:color/transparent"
         android:cacheColorHint="@android:color/transparent"

@@ -89,44 +89,66 @@
                 android:layout_marginTop="16dp"
                 android:orientation="vertical">
 
-
-                <EditText
-                    android:id="@+id/editText_Woche0"
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/EditText_woche0_lay"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:ems="10"
-                    android:hint="@string/Hint_Woche0"
-                    android:inputType="numberDecimal" />
+                    android:layout_centerHorizontal="true">
 
-                <EditText
-                    android:id="@+id/editText_Woche1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_below="@+id/editText_Woche0"
-                    android:layout_centerHorizontal="true"
-                    android:ems="10"
-                    android:hint="@string/Hint_Woche1"
-                    android:inputType="numberDecimal" />
+
+                    <EditText
+                        android:id="@+id/editText_Woche0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/Hint_Woche0"
+                        android:inputType="numberDecimal" />
+
+
+                </android.support.design.widget.TextInputLayout>
 
                 <TextView
                     android:id="@+id/textView_einheit1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/editText_Woche0"
-                    android:layout_alignEnd="@+id/editText_Woche0"
-                    android:layout_alignRight="@+id/editText_Woche0"
+                    android:layout_above="@+id/EditText_woche1_lay"
+                    android:layout_alignEnd="@+id/EditText_woche0_lay"
+                    android:layout_alignRight="@+id/EditText_woche0_lay"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
                     android:text="@string/Einheit" />
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/EditText_woche1_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_below="@+id/EditText_woche0_lay"
+                    android:layout_centerHorizontal="true">
+
+                    <EditText
+                        android:id="@+id/editText_Woche1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="@string/Hint_Woche1"
+                        android:inputType="numberDecimal" />
+
+
+                </android.support.design.widget.TextInputLayout>
 
                 <TextView
                     android:id="@+id/textView_einheit2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignBaseline="@+id/editText_Woche1"
-                    android:layout_alignEnd="@+id/editText_Woche1"
-                    android:layout_alignRight="@+id/editText_Woche1"
+                    android:layout_alignEnd="@+id/EditText_woche1_lay"
+                    android:layout_alignRight="@+id/EditText_woche1_lay"
+                    android:layout_below="@+id/EditText_woche1_lay"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:layout_marginRight="4dp"
                     android:text="@string/Einheit" />
 
 
@@ -147,8 +169,7 @@
 
                 <Button
                     android:id="@+id/button_calc"
-
-                    android:layout_width="128dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
@@ -156,11 +177,13 @@
                     android:layout_marginEnd="6dp"
                     android:layout_marginRight="6dp"
                     android:background="@color/primary_light"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
                     android:text="@string/Button_calc_text" />
 
                 <Button
                     android:id="@+id/button_remind"
-                    android:layout_width="128dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="6dp"
                     android:layout_marginStart="6dp"
@@ -168,6 +191,8 @@
                     android:layout_toRightOf="@+id/button_calc"
                     android:background="@color/accent"
                     android:onClick="remindAlert"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
                     android:text="@string/Button_remind_text" />
 
 
