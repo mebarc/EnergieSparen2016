@@ -18,7 +18,7 @@
         android:layout_marginBottom="4dp"
         android:layout_marginLeft="12dp"
         android:layout_marginRight="12dp"
-        android:layout_marginTop="4dp">
+        android:layout_marginTop="16dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -30,14 +30,13 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Zählerstände von heute und kommender Woche eintragen, um die Kosten zu berechnen"
-                android:textAppearance="?android:attr/textAppearanceSearchResultTitle"
-                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
                 android:layout_marginLeft="6dp"
                 android:layout_marginStart="6dp"
-                />
+                android:text="Zählerstände von heute und kommender Woche eintragen, um die Kosten zu berechnen"
+                android:textAppearance="?android:attr/textAppearanceSearchResultTitle" />
 
             <LinearLayout
                 android:id="@+id/radiolayout"
@@ -51,9 +50,10 @@
                     android:id="@+id/RadioGroupLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginStart="6dp"
                     android:layout_marginTop="16dp"
-                    android:orientation="horizontal"
-                    android:layout_marginLeft="6dp">
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/radioButton_Strom"
@@ -86,39 +86,38 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/radiolayout"
-                android:orientation="vertical"
-                android:layout_marginTop="16dp">
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
 
 
                 <EditText
                     android:id="@+id/editText_Woche0"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
                     android:ems="10"
                     android:hint="@string/Hint_Woche0"
-                    android:inputType="numberDecimal"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true" />
+                    android:inputType="numberDecimal" />
 
                 <EditText
                     android:id="@+id/editText_Woche1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
                     android:layout_below="@+id/editText_Woche0"
+                    android:layout_centerHorizontal="true"
                     android:ems="10"
                     android:hint="@string/Hint_Woche1"
-                    android:inputType="numberDecimal"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    />
+                    android:inputType="numberDecimal" />
 
                 <TextView
                     android:id="@+id/textView_einheit1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/editText_Woche0"
-                    android:layout_alignRight="@+id/editText_Woche0"
                     android:layout_alignEnd="@+id/editText_Woche0"
+                    android:layout_alignRight="@+id/editText_Woche0"
                     android:text="@string/Einheit" />
 
                 <TextView
@@ -126,8 +125,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/editText_Woche1"
-                    android:layout_alignRight="@+id/editText_Woche1"
                     android:layout_alignEnd="@+id/editText_Woche1"
+                    android:layout_alignRight="@+id/editText_Woche1"
                     android:text="@string/Einheit" />
 
 
@@ -137,66 +136,63 @@
                 android:id="@+id/buttonlayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/edittextlayout"
-                android:orientation="horizontal"
-                android:layout_marginTop="16dp"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentRight="true"
                 android:layout_alignParentStart="true"
-                android:gravity="center">
+                android:layout_below="@+id/edittextlayout"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/button_calc"
 
                     android:layout_width="128dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/Button_calc_text"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:background="@color/primary_light"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="6dp"
                     android:layout_marginRight="6dp"
-                        android:layout_marginEnd="6dp"/>
+                    android:background="@color/primary_light"
+                    android:text="@string/Button_calc_text" />
 
                 <Button
                     android:id="@+id/button_remind"
                     android:layout_width="128dp"
                     android:layout_height="wrap_content"
-                    android:onClick="remindAlert"
-                    android:text="@string/Button_remind_text"
-                    android:layout_toRightOf="@+id/button_calc"
-                    android:layout_toEndOf="@+id/button_calc"
-                    android:background="@color/accent"
                     android:layout_marginLeft="6dp"
-                    android:layout_marginStart="6dp"/>
-
+                    android:layout_marginStart="6dp"
+                    android:layout_toEndOf="@+id/button_calc"
+                    android:layout_toRightOf="@+id/button_calc"
+                    android:background="@color/accent"
+                    android:onClick="remindAlert"
+                    android:text="@string/Button_remind_text" />
 
 
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/relativeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/buttonlayout"
-                android:id="@+id/relativeLayout">
+                android:layout_below="@+id/buttonlayout">
 
                 <TextView
+                    android:id="@+id/textView_ergebnis"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/textView_ergebnis"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="24dp"
                     android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:textColor="@color/primary_text"/>
+                    android:textColor="@color/primary_text" />
 
             </RelativeLayout>
 
         </RelativeLayout>
 
     </ScrollView>
-
-
 
 
 </RelativeLayout>
