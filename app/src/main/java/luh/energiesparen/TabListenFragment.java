@@ -30,26 +30,24 @@ public class TabListenFragment extends Fragment {
         return fragment;
     }
 
+    // Set Sliding Panel Title
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         inhalte = getArguments().getStringArray(ARG_LISTE);
     }
 
+
+    // Fill Current Tab with the List of Tips
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
         ListView lv = new ListView(getActivity());
                 ArrayAdapter<String> itemsAdapter =
                 new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, inhalte);
 
-
         lv.setAdapter(itemsAdapter);
-
         return lv;
     }
-
-
 }

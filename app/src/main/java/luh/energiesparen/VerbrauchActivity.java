@@ -33,6 +33,7 @@ public class VerbrauchActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verbrauch);
 
+        // Enable Toolbar and their Navigation Ability
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
@@ -50,6 +51,7 @@ public class VerbrauchActivity extends AppCompatActivity {
         // Init Fields
         onRadioButtonClicked(findViewById(R.id.radioButton_Strom));
 
+        // Save values from first Textfield after change
         editText1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -82,6 +84,7 @@ public class VerbrauchActivity extends AppCompatActivity {
             }
         });
 
+        // Save values from second Textfield after change
         editText2.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -114,7 +117,7 @@ public class VerbrauchActivity extends AppCompatActivity {
             }
         });
 
-
+        // Calculate the Energy Costs after Click
         calc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -124,6 +127,7 @@ public class VerbrauchActivity extends AppCompatActivity {
                 String jeWoche, jeMonat, jeJahr;
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
+                // Load values
                 switch (getSelectedRadioButton()) {
                     case 0:
                         wertA = sharedPref.getString("wert1a", "ERR");
@@ -143,6 +147,7 @@ public class VerbrauchActivity extends AppCompatActivity {
                         break;
                 }
 
+                // Make sure Values are useable
                 if (wertA.equals("ERR") || wertB.equals("ERR") || preis.equals("ERR"))
                     ergField.setText("Fehler beim Laden der Werte\nSind in beiden Feldern die Werte?");
                 else if (wertA.equals("") || wertB.equals("") || preis.equals(""))
@@ -152,6 +157,8 @@ public class VerbrauchActivity extends AppCompatActivity {
                     Float fpreis = Float.parseFloat(preis);
                     if (amount < 0 || fpreis < 0) ergField.setText("Fehler!\nDer aktuelle Zählerstand muss größer sein, als der von letzter Woche");
                     else {
+
+                        // Calculate Costs
                         if(radioGroup.getCheckedRadioButtonId() == R.id.radioButton_Gas) {
                             // Umrechnung von kWh = m^3 * Brennwert * Zustandszahl
                             // Brennwert = 10
@@ -161,12 +168,15 @@ public class VerbrauchActivity extends AppCompatActivity {
                         else {
                             amount *= fpreis;
                         }
+
+                        // Cent to Euro Calculation
                         amount /= 100;
 
                         jeWoche = String.format("%.2f", amount);
                         jeMonat = String.format("%.2f", amount * 4);
                         jeJahr = String.format("%.2f", amount * 52);
 
+                        // Output
                         ergField.setText("Kosten je Woche: " + jeWoche + "€\n" +
                                         "Kosten je Monat: " + jeMonat + "€\n" +
                                         "Kosten je Jahr: " + jeJahr + "€\n");
@@ -178,6 +188,7 @@ public class VerbrauchActivity extends AppCompatActivity {
 
     }
 
+    // Remind Button starting a Alarm which Triggers the Notification
     public void remindAlert(View view) {
 //        long delay = 1000*60*60*24*7;
         long delay = 1000 * 5;
@@ -193,6 +204,7 @@ public class VerbrauchActivity extends AppCompatActivity {
     }
 
 
+    // Load the Values into the Edittexts on Change of Selection
     public void onRadioButtonClicked(View view) {
         boolean checked = ((RadioButton) view).isChecked();
         String[] einheiten = {"kWh", "m^3", "m^3"};

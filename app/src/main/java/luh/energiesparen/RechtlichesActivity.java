@@ -15,6 +15,7 @@ public class RechtlichesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rechtliches);
 
+        // Enable Toolbar and their Navigation Ability
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);

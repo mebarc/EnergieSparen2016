@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
+// Fragment Containing the Holder for the Tabs
 public class TabsFragment extends Fragment {
 
     private static String TAB_TITLES = "tab_titles";
@@ -30,6 +30,7 @@ public class TabsFragment extends Fragment {
         // Required empty public constructor
     }
 
+    // Constructor which gets the TItles and the StringArrays with the Tips passed
     public static TabsFragment newInstance(String[] titles,
                                            String[] liste1,
                                            String[] liste2,
@@ -54,16 +55,15 @@ public class TabsFragment extends Fragment {
         liste3 = getArguments().getStringArray(TAB_LISTE3);
     }
 
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflate Layout
         View view = inflater.inflate(R.layout.fragment_tabs, container, false);
 
         tabLayout = (TabLayout) view.findViewById(R.id.tabs);
         viewPager = (ViewPager) view.findViewById(R.id.viewpager);
-
-
 
         tabstitles = getActivity().getResources().getStringArray(R.array.sTabtitles);
         int_items = tabstitles.length;
@@ -79,6 +79,7 @@ public class TabsFragment extends Fragment {
         return view;
     }
 
+    // Adapter to handle Data and Current Tab Position
     private static class MyAdapter extends FragmentPagerAdapter {
 
         public MyAdapter(FragmentManager fm) {

@@ -30,16 +30,7 @@ public class SettingsActivity extends AppCompatActivity {
             }
         }
     }
-/*
-    Inkonsistente Darstellung von Dialogen etc:
-    Dialog ist Systemstandard, Alert ist Materialdesign
-    Problem ist, dass die Supportlib inkonsistenten und Bugs aufweist,
-    dadurch ist eine z.B. keine Dialogeingabe von Ziffern ohne Workarounds
-    und Wrapper möglich
-    siehe:
-    https://code.google.com/p/android/issues/detail?id=183376
-    https://code.google.com/p/android/issues/detail?id=185164
-*/
+
 
     public static class MyPreferenceFragment extends PreferenceFragment  {
 
@@ -48,6 +39,7 @@ public class SettingsActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.preferences);
 
+            // Resetbutton Implementation
             Preference reset = findPreference("resetbutton");
             reset.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
                 @Override
@@ -55,10 +47,13 @@ public class SettingsActivity extends AppCompatActivity {
 
                     if(preference.getKey().equals("resetbutton")) {
 
+                        // Make user confirm resetting
                         AlertDialog.Builder myAlert = new AlertDialog.Builder(getActivity());
                         myAlert.setMessage("Stellt die Standardwerte für die Preise wieder her")
                                 .setTitle("Preise zurücksetzen?")
                                 .setPositiveButton("Zurücksetzen", new DialogInterface.OnClickListener() {
+
+                                    // Reset the values to Default if user confirmed
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
                                         dialog.dismiss();
@@ -72,6 +67,8 @@ public class SettingsActivity extends AppCompatActivity {
                                         getActivity().finish();
                                     }
                                 })
+
+                                // Keep the values if user declines
                                 .setNegativeButton("Abbrechen", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
@@ -88,6 +85,18 @@ public class SettingsActivity extends AppCompatActivity {
 
     }
 }
+
+
+/*
+    Inkonsistente Darstellung von Dialogen etc:
+    Dialog ist Systemstandard, Alert ist Materialdesign
+    Problem ist, dass die Supportlib inkonsistenten und Bugs aufweist,
+    dadurch ist eine z.B. keine Dialogeingabe von Ziffern ohne Workarounds
+    und Wrapper möglich
+    siehe:
+    https://code.google.com/p/android/issues/detail?id=183376
+    https://code.google.com/p/android/issues/detail?id=185164
+*/
 
 /*
 public class SettingsActivity  extends AppCompatActivity {
