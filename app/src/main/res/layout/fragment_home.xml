@@ -9,33 +9,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="48dp"
         android:gravity="center"
-        android:text="Homescreen"
+        android:text="Energiespar App"
         android:textColor="@android:color/holo_red_light"
         android:textSize="30sp"
-        android:layout_marginBottom="40dp" />
+        android:layout_marginBottom="32dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autoLink="web"
-        android:text="noch viel zu tun"
+        android:text="Willkommen in der Energiespar App\n\nIn dieser App finden Sie nützliche Tips, wie der Wasserverbrauch im Haushalt reduziert und Energiekosten eingespart werden können\n\nZusätzlich können die eignen Kosten im Haushalt berechnet werden"
         android:textColor="#000"
         android:textSize="15sp"
         android:textStyle="italic"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
-        android:id="@+id/textView8" />
+        android:id="@+id/textView8"
+        android:gravity="center"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"/>
 
     <Button
         android:id="@+id/button_verbrauch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="  Verbrauch bestimmen  "
-        android:layout_alignParentBottom="true"
+        android:background="@color/primary_light"
+        android:layout_below="@+id/textView8"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:background="@color/primary"/>
+        android:layout_marginTop="16dp"/>
 
 </RelativeLayout>
