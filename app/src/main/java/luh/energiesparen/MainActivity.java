@@ -35,33 +35,39 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
+        // Set Default Values for Preferences on first Startup of the App
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false);
 
+        // Enable Toolbar
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
         }
+
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mNavigationView = (NavigationView) findViewById(R.id.nvView);
 
+        // Enable Icon functions from Toolbar
         mActionBarDrawerToggle = setupDrawerToggle();
 
         mDrawerLayout.setDrawerListener(mActionBarDrawerToggle);
         mFragmentManager = getSupportFragmentManager();
 
+        // Array of NavigationDrawer Menu Items
         titles = getResources().getStringArray(R.array.navTitles);
 
+        // Set Toolbar Title to last selected Item from NavigationDrawer
         if (savedInstanceState != null) {
             mCurrentSelectedPosition = savedInstanceState.getInt(STATE_SELECTED_POSITION);
             mFromSavedInstanceState = true;
             setTitle(titles[mCurrentSelectedPosition]);
         } else {
+            // Initial Startup: Starting HomeFragment and setting Title in Toolbar
             getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
             setTitle(titles[0]);
         }
 
+        // App Navigation as reaction to click on Item in the Navigation Drawer
         mNavigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -74,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                         mDrawerLayout.closeDrawers();
 
+                        // Load new Activity or replace the fragment
                         switch (menuItem.getItemId()) {
                             case R.id.nav_item_01_home:
                                 getSupportFragmentManager().beginTransaction().replace(R.id.flContent, new HomeFragment()).commit();
@@ -134,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        // Make Drawer close on backpress if opened instead of closing the App
         if (mDrawerLayout.isDrawerOpen(findViewById(R.id.nvView))) {
             mDrawerLayout.closeDrawer(findViewById(R.id.nvView));
         } else {
@@ -150,17 +158,14 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
+
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
+        // Navigation with the Dropdown OptionsMenu
         if (mActionBarDrawerToggle.onOptionsItemSelected(item)) {
             return true;
         } else if (id == R.id.action_settings) {
             mCurrentSelectedPosition = settingsposition;
-            //Toast.makeText(MainActivity.this, "settings pressed", Toast.LENGTH_SHORT).show();
             startSettings();
         } else if (id == R.id.action_impressum) {
             startImpressum();

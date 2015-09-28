@@ -144,13 +144,13 @@ public class VerbrauchActivity extends AppCompatActivity {
                 }
 
                 if (wertA.equals("ERR") || wertB.equals("ERR") || preis.equals("ERR"))
-                    ergField.setText("Fehler beim Laden der Werte");
+                    ergField.setText("Fehler beim Laden der Werte\nSind in beiden Feldern die Werte?");
                 else if (wertA.equals("") || wertB.equals("") || preis.equals(""))
-                    ergField.setText("Fehler:\nKein Wert eingetragen zur Berechnung");
+                    ergField.setText("Fehler:\nKein Werte eingetragen zur Berechnung");
                 else {
                     Float amount = Float.parseFloat(wertB) - Float.parseFloat(wertA);
                     Float fpreis = Float.parseFloat(preis);
-                    if (amount < 0 || fpreis < 0) ergField.setText("Fehler in der Berechnung2");
+                    if (amount < 0 || fpreis < 0) ergField.setText("Fehler!\nDer aktuelle Zählerstand muss größer sein, als der von letzter Woche");
                     else {
                         if(radioGroup.getCheckedRadioButtonId() == R.id.radioButton_Gas) {
                             // Umrechnung von kWh = m^3 * Brennwert * Zustandszahl

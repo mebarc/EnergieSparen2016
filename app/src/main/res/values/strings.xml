@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">EnergieSparen</string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_rechtliches">Rechtliches</string>
+     <string name="action_rechtliches">Rechtliches</string>
     <string name="action_impressum">Impressum</string>
     <string name="action_settings">Settings</string>
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
+    <string name="notification_text">Zählerstände ablesen und Verbrauch bestimmen</string>
 
     <string name="nav_item_01">Home</string>
     <string name="nav_item_02">Heizen</string>
@@ -36,7 +36,7 @@
     <string name="rechtliches02_icons">Icons made by Freepik from http://www.flaticon.com are licensed under Creative Commons BY 3.0</string>
     <string name="text_home02">Willkommen in der Energiespar App\n\nIn dieser App finden Sie nützliche Tips, wie der Wasserverbrauch im Haushalt reduziert und Energiekosten eingespart werden können\n\nZusätzlich können die eignen Kosten im Haushalt berechnet werden</string>
     <string name="text_home01">Energiespar App</string>
-    <string name="button_text_verbrauch">Verbrauch bestimmen</string>
+    <string name="button_text_verbrauch">  Verbrauch bestimmen  </string>
     <!--<string name="tab_item_04">Keller</string>-->
 
     <string-array name="sTabtitles">

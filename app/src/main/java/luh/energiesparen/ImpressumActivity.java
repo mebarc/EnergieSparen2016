@@ -15,6 +15,7 @@ public class ImpressumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_impressum);
 
+        // Enable Toolbar and their Navigation Ability
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);

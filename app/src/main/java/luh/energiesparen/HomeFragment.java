@@ -9,9 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-
-
-
+// Startbildschirm
 public class HomeFragment extends Fragment {
 
     public HomeFragment() {
@@ -23,15 +21,19 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
+        // Load Layout
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
+        // Button Click Action
         Button button = (Button) view.findViewById(R.id.button_verbrauch);
         button.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
+
+                // Opens new VerbrauchsActivity
                 Intent intent = new Intent(getActivity(), VerbrauchActivity.class);
                 startActivity(intent);
-
             }
         });
 
