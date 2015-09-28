@@ -20,7 +20,7 @@ public class NotificationPublisher extends BroadcastReceiver {
 
         Intent in = new Intent(context, VerbrauchActivity.class);
 
-        mBuilder.setSmallIcon(R.drawable.ic_strom);
+        mBuilder.setSmallIcon(R.mipmap.ic_launcher);
         mBuilder.setContentTitle("EnergieSparen");
         mBuilder.setContentText("Zählerstände ablesen und Verbrauch bestimmen");
 

@@ -30,11 +30,14 @@
                 android:id="@+id/textView6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Large Text"
-                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Zählerstände von heute und kommender Woche eintragen, um die Kosten zu berechnen"
+                android:textAppearance="?android:attr/textAppearanceSearchResultTitle"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="6dp"
+                android:layout_marginStart="6dp"
+                />
 
             <LinearLayout
                 android:id="@+id/radiolayout"
@@ -48,7 +51,9 @@
                     android:id="@+id/RadioGroupLayout"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="6dp">
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="6dp">
 
                     <RadioButton
                         android:id="@+id/radioButton_Strom"
@@ -82,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/radiolayout"
                 android:orientation="vertical"
-                android:layout_marginTop="6dp">
+                android:layout_marginTop="16dp">
 
 
                 <EditText
@@ -134,7 +139,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edittextlayout"
                 android:orientation="horizontal"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="16dp"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentLeft="true"
@@ -143,22 +148,28 @@
 
                 <Button
                     android:id="@+id/button_calc"
-                    style="?android:attr/borderlessButtonStyle"
-                    android:layout_width="wrap_content"
+
+                    android:layout_width="128dp"
                     android:layout_height="wrap_content"
                     android:text="@string/Button_calc_text"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:background="@color/primary"
+                    android:layout_marginRight="6dp"
+                        />
 
                 <Button
                     android:id="@+id/button_remind"
-                    android:layout_width="wrap_content"
+                    android:layout_width="128dp"
                     android:layout_height="wrap_content"
                     android:onClick="remindAlert"
                     android:text="@string/Button_remind_text"
                     android:layout_toRightOf="@+id/button_calc"
-                    android:layout_toEndOf="@+id/button_calc"/>
+                    android:layout_toEndOf="@+id/button_calc"
+
+                    android:background="@color/accent"
+                    android:layout_marginLeft="6dp"/>
 
 
 
@@ -173,10 +184,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text=""
                     android:id="@+id/textView_ergebnis"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="16dp" />
+                    android:layout_marginTop="24dp"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/primary_text"/>
 
             </RelativeLayout>
 

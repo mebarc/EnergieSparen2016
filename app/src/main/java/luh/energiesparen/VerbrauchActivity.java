@@ -144,9 +144,9 @@ public class VerbrauchActivity extends AppCompatActivity {
                 }
 
                 if (wertA.equals("ERR") || wertB.equals("ERR") || preis.equals("ERR"))
-                    ergField.setText("Fehler in der Berechnung0");
+                    ergField.setText("Fehler beim Laden der Werte");
                 else if (wertA.equals("") || wertB.equals("") || preis.equals(""))
-                    ergField.setText("Fehler in der Berechnung1");
+                    ergField.setText("Fehler:\nKein Wert eingetragen zur Berechnung");
                 else {
                     Float amount = Float.parseFloat(wertB) - Float.parseFloat(wertA);
                     Float fpreis = Float.parseFloat(preis);
@@ -162,9 +162,11 @@ public class VerbrauchActivity extends AppCompatActivity {
                             amount *= fpreis;
                         }
                         amount /= 100;
+
                         jeWoche = String.format("%.2f", amount);
                         jeMonat = String.format("%.2f", amount * 4);
                         jeJahr = String.format("%.2f", amount * 52);
+
                         ergField.setText("Kosten je Woche: " + jeWoche + "€\n" +
                                         "Kosten je Monat: " + jeMonat + "€\n" +
                                         "Kosten je Jahr: " + jeJahr + "€\n");
@@ -177,8 +179,8 @@ public class VerbrauchActivity extends AppCompatActivity {
     }
 
     public void remindAlert(View view) {
-        long delay = 1000*60*60*24*7;
-//        long delay = 1000 * 5;
+//        long delay = 1000*60*60*24*7;
+        long delay = 1000 * 5;
 
 
         Intent intent = new Intent(this, NotificationPublisher.class);
@@ -186,6 +188,7 @@ public class VerbrauchActivity extends AppCompatActivity {
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + delay, pendingIntent);
         Toast.makeText(this, "Erinnerung in einer Woche", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Erinnerung in 5 Sekunden", Toast.LENGTH_SHORT).show();
 
     }
 

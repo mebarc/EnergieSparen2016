@@ -31,8 +31,8 @@
     <string name="Hint_Woche0">aktueller Wert</string>
     <string name="Hint_Woche1">eine Woche später</string>
     <string name="Einheit">Einheit</string>
-    <string name="Button_calc_text">calc button\nBORDERLESS</string>
-    <string name="Button_remind_text">remind button</string>
+    <string name="Button_calc_text">  calc button\nBORDERLESS  </string>
+    <string name="Button_remind_text">  remind button  </string>
     <string name="rechtliches02_icons">Icons made by Freepik from\nhttp://www.flaticon.com\nare licensed under Creative Commons BY 3.0</string>
     <!--<string name="tab_item_04">Keller</string>-->
 
