@@ -4,9 +4,13 @@
     <!--STROM-->
 
     <string name="StromKueche01">Auf energieeffiziente Geräte achten</string>
+    <string name="StromKueche02">Kochen mit offenem Deckel verbraucht mehr als 3x soviel Energie</string>
+    <string name="StromKueche03">Bei jedem Öffnen der Backofentür gehen rund 20% der Wärme verloren</string>
 
     <string-array name="STROMKUECHE">
         <item>@string/StromKueche01</item>
+        <item>@string/StromKueche02</item>
+        <item>@string/StromKueche03</item>
     </string-array>
 
     <string name="StromBad01">Zeit zum Föhnen beachten</string>
@@ -16,10 +20,13 @@
     </string-array>
 
     <string name="StromWohnung01">Überprüfung der Verbrauchsabrechnung</string>
-
+    <string name="StromWohnung02">LED Lampen können den Stromverbrauch um bis zu 80% reduzieren im Vergleich mit herkömmlichen Glühbirnen</string>
+    <string name="StromWohnung03">Viele Elektrogeräte besitzen einen Transformator, welcher auch im Standby-Betrieb Strom verbraucht. Daher Geräte besser komplett abschalten</string>
 
     <string-array name="STROMWOHNUNG">
         <item>@string/StromWohnung01</item>
+        <item>@string/StromWohnung02</item>
+        <item>@string/StromWohnung03</item>
     </string-array>
 
 
@@ -74,7 +81,7 @@
         <item>@string/LuftBad01</item>
     </string-array>
 
-    <string name="LuftWohnung01">Für den Luftwechsel nur kurz Stoß- oder Querlüften</string>
+    <string name="LuftWohnung01">Für den Luftwechsel nur kurz Stoß- oder Querlüften, maximal 2\-5 Minuten</string>
     <string name="LuftWohnung02">Keine tägliche Grundlüftung</string>
     <string name="LuftWohnung03">Lüftungsgewohnheiten an die Jahreszeit anpassen (Art und Dauer)</string>
     <string name="LuftWohnung04">Schränke usw. 10cm von der Wand abrücken (Luftzirkulation, Feuchtigkeitstransport)</string>
@@ -90,11 +97,11 @@
 
     <!--Heizen-->
 
-    <string name="HeizenKueche01"></string>
+    <string name="HeizenKueche01">Nach dem Backen kann die Restwärme des Ofens bei offener Backofentür schneller in die Küche entweichen und damit Heizkosten einsparen</string>
 
 
     <string-array name="HEIZENKUECHE">
-        <!--<item>@string/HeizenKueche01</item>-->
+        <item>@string/HeizenKueche01</item>
     </string-array>
 
     <string name="HeizenBad01">Warme Badezimmerluft in die Wohnung entweichen lassen</string>
