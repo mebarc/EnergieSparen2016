@@ -1,7 +1,9 @@
 package luh.energiesparen;
 
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -120,6 +122,21 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
+        Thread mThread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                boolean isFirstStart = sharedPref.getBoolean("first_startup", true);
+
+                if(isFirstStart) {
+                    mDrawerLayout.openDrawer(mNavigationView);
+                    SharedPreferences.Editor editor = sharedPref.edit();
+                    editor.putBoolean("first_startup", false);
+                    editor.commit();
+                }
+            }
+        });
+    mThread.start();
     }
 
     private void startSettings() {
