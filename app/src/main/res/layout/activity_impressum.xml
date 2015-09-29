@@ -26,7 +26,7 @@
                 android:layout_marginLeft="12dp"
                 android:layout_marginRight="12dp"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="12dp"
                 android:gravity="start"
                 android:autoLink="web"
                 android:textAppearance="?android:textAppearanceMedium"
