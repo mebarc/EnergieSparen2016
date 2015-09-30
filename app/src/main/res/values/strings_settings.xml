@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="strom_defaultValue">29.7</string>
-    <string name="gas_defaultValue">6.8</string>
+    <string name="strom_defaultValue">29.51</string>
+    <string name="gas_defaultValue">6.76</string>
     <string name="wasser_defaultValue">169</string>
 
     <!--<string name="KEY_STROM">preis_strom</string>
     <string name="KEY_GAS">preis_gas</string>
     <string name="KEY_WASSER">preis_wasser</string>-->
 
-    <string name="Hint_Strom">Standardwert: 29.7</string>
-    <string name="Hint_Gas">Standardwert:6.8</string>
+    <string name="Hint_Strom">Standardwert: 29.51</string>
+    <string name="Hint_Gas">Standardwert:6.76</string>
     <string name="Hint_Wasser">Standardwert: 169</string>
 </resources>
