@@ -155,17 +155,17 @@ public class VerbrauchActivity extends AppCompatActivity {
                 else {
                     Float amount = Float.parseFloat(wertB) - Float.parseFloat(wertA);
                     Float fpreis = Float.parseFloat(preis);
-                    if (amount < 0 || fpreis < 0) ergField.setText("Fehler!\nDer aktuelle Zählerstand muss größer sein, als der von letzter Woche");
+                    if (amount < 0 || fpreis < 0)
+                        ergField.setText("Fehler!\nDer aktuelle Zählerstand muss größer sein, als der von letzter Woche");
                     else {
 
                         // Calculate Costs
-                        if(radioGroup.getCheckedRadioButtonId() == R.id.radioButton_Gas) {
+                        if (radioGroup.getCheckedRadioButtonId() == R.id.radioButton_Gas) {
                             // Umrechnung von kWh = m^3 * Brennwert * Zustandszahl
                             // Brennwert = 10
                             // Zustandszahl = 0.95
                             amount *= fpreis * 10 * 95 / 100;
-                        }
-                        else {
+                        } else {
                             amount *= fpreis;
                         }
 
@@ -178,8 +178,8 @@ public class VerbrauchActivity extends AppCompatActivity {
 
                         // Output
                         ergField.setText("Kosten je Woche: " + jeWoche + "€\n" +
-                                        "Kosten je Monat: " + jeMonat + "€\n" +
-                                        "Kosten je Jahr: " + jeJahr + "€\n");
+                                "Kosten je Monat: " + jeMonat + "€\n" +
+                                "Kosten je Jahr: " + jeJahr + "€\n");
                     }
 
                 }
