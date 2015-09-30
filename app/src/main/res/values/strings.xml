@@ -31,8 +31,8 @@
     <string name="Hint_Woche0">aktueller Wert</string>
     <string name="Hint_Woche1">eine Woche später</string>
     <string name="Einheit">Einheit</string>
-    <string name="Button_calc_text">  calc button\nBORDERLESS  </string>
-    <string name="Button_remind_text">  remind button  </string>
+    <string name="Button_calc_text">Berechnen</string>
+    <string name="Button_remind_text">in 7 Tagen erinnern</string>
     <string name="rechtliches02_icons">Icons made by Freepik from http://www.flaticon.com are licensed under Creative Commons BY 3.0</string>
     <string name="text_home02">Willkommen in der Energiespar App\n\nIn dieser App finden Sie nützliche Tips, wie der Wasserverbrauch im Haushalt reduziert und Energiekosten eingespart werden können\n\nZusätzlich können die eignen Kosten im Haushalt berechnet werden</string>
     <string name="text_home01">Energiespar App</string>

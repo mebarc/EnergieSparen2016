@@ -156,7 +156,7 @@ public class VerbrauchActivity extends AppCompatActivity {
                 if (wertA.equals("ERR") || wertB.equals("ERR") || preis.equals("ERR"))
                     ergField.setText("Fehler beim Laden der Werte\nSind in beiden Feldern die Werte?");
                 else if (wertA.equals("") || wertB.equals("") || preis.equals(""))
-                    ergField.setText("Fehler:\nKein Werte eingetragen zur Berechnung");
+                    ergField.setText("Fehler:\nKeine Werte eingetragen zur Berechnung");
                 else {
                     Float amount = Float.parseFloat(wertB) - Float.parseFloat(wertA);
                     Float fpreis = Float.parseFloat(preis);
