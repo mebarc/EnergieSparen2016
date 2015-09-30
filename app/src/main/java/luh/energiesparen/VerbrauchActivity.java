@@ -195,8 +195,8 @@ public class VerbrauchActivity extends AppCompatActivity {
 
     // Remind Button starting a Alarm which Triggers the Notification
     public void remindAlert(View view) {
-//        long delay = 1000*60*60*24*7;
-        long delay = 1000 * 5;
+        long delay = 1000*60*60*24*7;
+//        long delay = 1000 * 5;
 
 
         InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
@@ -206,8 +206,8 @@ public class VerbrauchActivity extends AppCompatActivity {
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + delay, pendingIntent);
-//        Toast.makeText(this, "Erinnerung in einer Woche", Toast.LENGTH_SHORT).show();
-        Toast.makeText(this, "Erinnerung in 5 Sekunden", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Erinnerung in einer Woche", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Erinnerung in 5 Sekunden", Toast.LENGTH_SHORT).show();
 
     }
 
