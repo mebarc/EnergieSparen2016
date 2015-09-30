@@ -39,7 +39,7 @@
                     android:id="@+id/nav_sub_item_01_settings"
                     android:checkable="false"
                     android:icon="@drawable/ic_settings"
-                    android:title="Settings" />
+                    android:title="@string/action_settings" />
 
             </menu>
 

@@ -29,6 +29,7 @@ public class SettingsActivity extends AppCompatActivity {
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             }
         }
+        setTitle(getResources().getString(R.string.action_settings));
     }
 
 

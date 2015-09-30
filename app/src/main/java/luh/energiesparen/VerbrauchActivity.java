@@ -2,6 +2,7 @@ package luh.energiesparen;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -127,6 +129,9 @@ public class VerbrauchActivity extends AppCompatActivity {
                 String jeWoche, jeMonat, jeJahr;
                 SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
 
+                InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+                imm.hideSoftInputFromWindow(calc.getWindowToken(), 0);
+
                 // Load values
                 switch (getSelectedRadioButton()) {
                     case 0:
@@ -194,12 +199,15 @@ public class VerbrauchActivity extends AppCompatActivity {
         long delay = 1000 * 5;
 
 
+        InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
+        imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
+
         Intent intent = new Intent(this, NotificationPublisher.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
         AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
         alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + delay, pendingIntent);
-        Toast.makeText(this, "Erinnerung in einer Woche", Toast.LENGTH_SHORT).show();
-//        Toast.makeText(this, "Erinnerung in 5 Sekunden", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "Erinnerung in einer Woche", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Erinnerung in 5 Sekunden", Toast.LENGTH_SHORT).show();
 
     }
 
