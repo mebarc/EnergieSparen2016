@@ -20,7 +20,7 @@
     </string-array>
 
     <string name="StromWohnung01">Überprüfung der Verbrauchsabrechnung</string>
-    <string name="StromWohnung02">LED Lampen können den Stromverbrauch um bis zu 80% reduzieren im Vergleich mit herkömmlichen Glühbirnen</string>
+    <string name="StromWohnung02">LED Lampen können den Stromverbrauch um bis zu 80% reduzieren im Vergleich zu herkömmlichen Glühbirnen</string>
     <string name="StromWohnung03">Viele Elektrogeräte besitzen einen Transformator, welcher auch im Standby-Betrieb Strom verbraucht. Daher Geräte besser komplett abschalten</string>
 
     <string-array name="STROMWOHNUNG">
