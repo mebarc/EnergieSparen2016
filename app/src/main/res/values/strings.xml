@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">EnergieSparen</string>
 
-     <string name="action_rechtliches">Rechtliches</string>
+    <string name="action_rechtliches">Rechtliches</string>
     <string name="action_impressum">Impressum</string>
     <string name="action_settings">Einstellungen</string>
     <string name="drawer_open">Open navigation drawer</string>
@@ -9,10 +9,13 @@
     <string name="notification_text">Zählerstände ablesen und Verbrauch bestimmen</string>
 
     <string name="nav_item_01">Home</string>
-    <string name="nav_item_02">Heizen</string>
-    <string name="nav_item_03">Lüften</string>
-    <string name="nav_item_04">Stromverbrauch</string>
-    <string name="nav_item_05">Wasserverbrauch</string>
+    <string name="nav_item_02">Verbrauchsdaten</string>
+    <string name="nav_item_03">Zählerstände eingeben</string>
+    <string name="nav_item_04">Heizen</string>
+    <string name="nav_item_05">Lüften</string>
+    <string name="nav_item_06">Stromverbrauch</string>
+    <string name="nav_item_07">Wasserverbrauch</string>
+    <string name="nav_item_08">Notizen</string>
 
     <string-array name="navTitles">
         <item>@string/nav_item_01</item>
@@ -20,29 +23,53 @@
         <item>@string/nav_item_03</item>
         <item>@string/nav_item_04</item>
         <item>@string/nav_item_05</item>
+        <item>@string/nav_item_06</item>
+        <item>@string/nav_item_07</item>
     </string-array>
+
+    <string name="tab_item_01Daten">Strom</string>
+    <string name="tab_item_02Daten">Gas</string>
+    <string name="tab_item_03Daten">Wasser</string>
 
     <string name="tab_item_01">Bad</string>
     <string name="tab_item_02">Küche</string>
     <string name="tab_item_03">Wohnung</string>
-    <string name="RadioButton_Strom_Text">Strom</string>
-    <string name="RadioButton_Gas_Text">Gas</string>
-    <string name="RadioButton_Wasser_Text">Wasser</string>
-    <string name="Hint_Woche0">aktueller Wert</string>
-    <string name="Hint_Woche1">eine Woche später</string>
-    <string name="Einheit">Einheit</string>
-    <string name="Button_calc_text">Berechnen</string>
-    <string name="Button_remind_text">in 7 Tagen erinnern</string>
-    <string name="rechtliches02_icons">Icons made by Freepik from http://www.flaticon.com are licensed under Creative Commons BY 3.0</string>
-    <string name="text_home02">Willkommen in der Energiespar App\n\nIn dieser App finden Sie nützliche Tips, wie der Wasserverbrauch im Haushalt reduziert und Energiekosten eingespart werden können\n\nZusätzlich können die eignen Kosten im Haushalt berechnet werden</string>
-    <string name="text_home01">Energiespar App</string>
-    <string name="button_text_verbrauch">  Verbrauch bestimmen  </string>
-    <!--<string name="tab_item_04">Keller</string>-->
 
     <string-array name="sTabtitles">
         <item>@string/tab_item_01</item>
         <item>@string/tab_item_02</item>
         <item>@string/tab_item_03</item>
     </string-array>
+
+    <string-array name="sTabtitlesDaten">
+        <item>@string/tab_item_01Daten</item>
+        <item>@string/tab_item_02Daten</item>
+        <item>@string/tab_item_03Daten</item>
+    </string-array>
+
+
+    <string name="RadioButton_Strom_Text">Strom</string>
+    <string name="RadioButton_Gas_Text">Gas</string>
+    <string name="RadioButton_Wasser_Text">Wasser</string>
+    <string name="Hint_Woche0">aktueller Wert</string>
+    <!--<string name="Hint_Woche1">eine Woche später</string>-->
+    <string name="Einheit">Einheit</string>
+    <!--  <string name="Button_calc_text">Berechnen</string>-->
+    <!--  <string name="Button_remind_text">in 7 Tagen erinnern</string>-->
+    <string name="rechtliches02_icons">Icons made by Freepik from http://www.flaticon.com are licensed under Creative Commons BY 3.0</string>
+
+    <string name="title_activity_notizen">Notizen</string>
+    <string name="dummy_button">Neue Notiz</string>
+    <string name="dummy_content">Fügen Sie hier neue Notizen für Ihre Verbrauchswerte hinzu.</string>
+    <!--  <string name="text_home02">Willkommen in der Energiespar App\n\nIn dieser App finden Sie nützliche Tips, wie der Wasserverbrauch im Haushalt reduziert und Energiekosten eingespart werden können\n\nZusätzlich können die eignen Kosten im Haushalt berechnet werden</string>
+    <string name="text_home01">Energiespar App</string>-->
+    <!-- <string name="button_text_verbrauch">  Verbrauch bestimmen  </string>-->
+    <!--<string name="tab_item_04">Keller</string>-->
+
+    <!--
+
+    <string name="title_activity_verbrauchsdaten">VerbrauchsdatenActivity</string>
+-->
+
 
 </resources>

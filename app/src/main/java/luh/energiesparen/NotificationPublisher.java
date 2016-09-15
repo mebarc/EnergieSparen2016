@@ -18,14 +18,14 @@ public class NotificationPublisher extends BroadcastReceiver {
 
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(context);
 
-        Intent in = new Intent(context, VerbrauchActivity.class);
+        Intent in = new Intent(context, MainActivity.class);
 
         mBuilder.setSmallIcon(R.mipmap.ic_launcher);
         mBuilder.setContentTitle(context.getResources().getString(R.string.app_name));
         mBuilder.setContentText(context.getResources().getString(R.string.notification_text));
 
         TaskStackBuilder stackBuilder = TaskStackBuilder.create(context);
-        stackBuilder.addParentStack(VerbrauchActivity.class);
+        stackBuilder.addParentStack(MainActivity.class);
         stackBuilder.addNextIntent(in);
 
         PendingIntent pendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);

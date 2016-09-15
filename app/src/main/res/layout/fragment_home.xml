@@ -8,52 +8,51 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView_homeTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/primary"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="2dp"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        />
 
 
 
     <TextView
-        android:id="@+id/textView_home01"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="64dp"
-        android:gravity="center"
-        android:text="@string/text_home01"
-        android:textColor="@android:color/holo_red_light"
-        android:textSize="30sp"
-        android:layout_marginBottom="48dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:autoLink="web"
-        android:text="@string/text_home02"
-        android:textColor="#000"
-        android:textSize="15sp"
-        android:textStyle="italic"
-        android:layout_below="@+id/textView_home01"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/textView_home02"
-        android:gravity="center"
-        android:layout_marginLeft="12dp"
-        android:layout_marginRight="12dp"/>
-
-    <Button
-        android:id="@+id/button_verbrauch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button_text_verbrauch"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="2dp"
+        android:padding="12dp"
         android:background="@color/primary_light"
-        android:layout_below="@+id/textView_home02"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="48dp"
-        android:layout_marginBottom="64dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp" />
-    </RelativeLayout>
+        android:textColor="@color/secondary_text"
+        android:id="@+id/textView_home"
+       />
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/primary_dark"
+            android:textColor="@color/white"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:layout_margin="4dp"
+            android:text="Logout"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
 
     </ScrollView>
 

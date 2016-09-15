@@ -2,6 +2,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <PreferenceCategory android:title="Benutzer">
+        <Preference
+            android:id="@+id/pref_username"
+            android:key="username"
+            android:defaultValue="Login">
+
+        </Preference>
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="Verbrauchspreise">
 
         <EditTextPreference
@@ -50,6 +59,24 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="Push-Benachrichtigungen">
+
+        <EditTextPreference
+            android:defaultValue="7"
+            android:dialogMessage="Nach wie viel Tagen möchten Sie an die Eingabe erinnert werden"
+            android:dialogTitle="Push-Benachrichtigung"
+            android:inputType="numberDecimal"
+            android:key="push_notification"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="Push-Benachrichtigung"
+            android:hint="@string/Hint_Notification"
+            android:summary="In Tagen"/>
+
+
+    </PreferenceCategory>
+
 
 
     <PreferenceCategory android:title="Sonstiges">
@@ -62,6 +89,8 @@
 
 
     </PreferenceCategory>
+
+
 
 
 </PreferenceScreen>

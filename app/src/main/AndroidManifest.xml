@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="luh.energiesparen" >
+    package="luh.energiesparen">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    "
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name"
             android:configChanges="keyboardHidden|screenSize|orientation"
+            android:label="@string/app_name"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,29 +20,25 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SettingsActivity"
+        <activity
+            android:name=".SettingsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="Settings"
             android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme"
-            android:configChanges="orientation|screenSize|keyboardHidden">
-        </activity>
-        <activity android:name=".ImpressumActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".ImpressumActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="Impressum"
-            android:parentActivityName=".MainActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden">
-        </activity>
-        <activity android:name=".RechtlichesActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".RechtlichesActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="Rechtliches"
-            android:parentActivityName=".MainActivity"
-            android:configChanges="orientation|screenSize|keyboardHidden">
-        </activity>
-        <activity android:name=".VerbrauchActivity"
-            android:label="Verbrauch"
-            android:parentActivityName=".MainActivity"
-            android:windowSoftInputMode="stateAlwaysHidden"
-            android:configChanges="orientation|screenSize|keyboardHidden">
-        </activity>
+            android:parentActivityName=".MainActivity" />
+
         <receiver android:name=".NotificationPublisher" />
+
     </application>
 
 </manifest>
